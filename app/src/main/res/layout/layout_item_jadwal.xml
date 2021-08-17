@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/current"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_big"
+            tools:text="Fajr"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/tv_big"
+            tools:text="04:07(PM)"/>
+
+        <ImageButton
+            android:id="@+id/btn_notification"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:layout_marginStart="@dimen/margin_16"
+            tools:src="@drawable/ic_baseline_notifications_off_24"
+            android:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/view_space"
+            android:visibility="gone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/margin_16"/>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,1484 @@
+[
+    {
+        "name": "Al-Fatiha",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0641\u0627\u062a\u062d\u0629",
+            "en": "The Opening",
+            "id": "Pembukaan"
+        },
+        "number_of_ayah": 7,
+        "number_of_surah": 1,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue904"
+    },
+    {
+        "name": "Al-Baqara",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0628\u0642\u0631\u0629",
+            "en": "The Cow",
+            "id": "Sapi"
+        },
+        "number_of_ayah": 286,
+        "number_of_surah": 2,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue905"
+    },
+    {
+        "name": "Aal-Imran",
+        "name_translations": {
+            "ar": "\u0622\u0644 \u0639\u0645\u0631\u0627\u0646",
+            "en": "The Family of Imraan",
+            "id": "Keluarga Imran"
+        },
+        "number_of_ayah": 200,
+        "number_of_surah": 3,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue906"
+    },
+    {
+        "name": "An-Nisaa'",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0633\u0627\u0621",
+            "en": "The Women",
+            "id": "Wanita"
+        },
+        "number_of_ayah": 176,
+        "number_of_surah": 4,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue907"
+    },
+    {
+        "name": "Al-Ma'ida",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0627\u0626\u062f\u0629",
+            "en": "The Table",
+            "id": "Hidangan"
+        },
+        "number_of_ayah": 120,
+        "number_of_surah": 5,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue908"
+    },
+    {
+        "name": "Al-An'am",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u0646\u0639\u0627\u0645",
+            "en": "The Cattle",
+            "id": "Binatang Ternak"
+        },
+        "number_of_ayah": 165,
+        "number_of_surah": 6,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue90b"
+    },
+    {
+        "name": "Al-A'raf",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u0639\u0631\u0627\u0641",
+            "en": "The Heights",
+            "id": "Tempat Tertinggi"
+        },
+        "number_of_ayah": 206,
+        "number_of_surah": 7,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue90c"
+    },
+    {
+        "name": "Al-Anfal",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u0646\u0641\u0627\u0644",
+            "en": "The Spoils of War",
+            "id": "Rampasan Perang"
+        },
+        "number_of_ayah": 75,
+        "number_of_surah": 8,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue90d"
+    },
+    {
+        "name": "Al-Tawba",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062a\u0648\u0628\u0629",
+            "en": "The Repentance",
+            "id": "Pengampunan"
+        },
+        "number_of_ayah": 129,
+        "number_of_surah": 9,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue90e"
+    },
+    {
+        "name": "Yunus",
+        "name_translations": {
+            "ar": "\u064a\u0648\u0646\u0633",
+            "en": "Jonas",
+            "id": "Yunus"
+        },
+        "number_of_ayah": 109,
+        "number_of_surah": 10,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue90f"
+    },
+    {
+        "name": "Hud",
+        "name_translations": {
+            "ar": "\u0647\u0648\u062f",
+            "en": "Hud",
+            "id": "Hud"
+        },
+        "number_of_ayah": 123,
+        "number_of_surah": 11,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue910"
+    },
+    {
+        "name": "Yusuf",
+        "name_translations": {
+            "ar": "\u064a\u0648\u0633\u0641",
+            "en": "Joseph",
+            "id": "Yusuf"
+        },
+        "number_of_ayah": 111,
+        "number_of_surah": 12,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue911"
+    },
+    {
+        "name": "Ar-Ra'd",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0631\u0639\u062f",
+            "en": "The Thunder",
+            "id": "Guruh"
+        },
+        "number_of_ayah": 43,
+        "number_of_surah": 13,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue912"
+    },
+    {
+        "name": "Ibrahim",
+        "name_translations": {
+            "ar": "\u0625\u0628\u0631\u0627\u0647\u064a\u0645",
+            "en": "Abraham",
+            "id": "Ibrahim"
+        },
+        "number_of_ayah": 52,
+        "number_of_surah": 14,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue913"
+    },
+    {
+        "name": "Al-Hijr",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062d\u062c\u0631",
+            "en": "The Rock",
+            "id": "Hijr"
+        },
+        "number_of_ayah": 99,
+        "number_of_surah": 15,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue914"
+    },
+    {
+        "name": "An-Nahl",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u062d\u0644",
+            "en": "The Bee",
+            "id": "Lebah"
+        },
+        "number_of_ayah": 128,
+        "number_of_surah": 16,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue915"
+    },
+    {
+        "name": "Al-Israa",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0625\u0633\u0631\u0627\u0621",
+            "en": "The Night Journey",
+            "id": "Memperjalankan Malam Hari"
+        },
+        "number_of_ayah": 111,
+        "number_of_surah": 17,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue916"
+    },
+    {
+        "name": "Al-Kahf",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0643\u0647\u0641",
+            "en": "The Cave",
+            "id": "Goa"
+        },
+        "number_of_ayah": 110,
+        "number_of_surah": 18,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue917"
+    },
+    {
+        "name": "Maryam",
+        "name_translations": {
+            "ar": "\u0645\u0631\u064a\u0645",
+            "en": "Mary",
+            "id": "Maryam"
+        },
+        "number_of_ayah": 98,
+        "number_of_surah": 19,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue918"
+    },
+    {
+        "name": "Ta-Ha",
+        "name_translations": {
+            "ar": "\u0637\u0647",
+            "en": "Taa-Haa",
+            "id": "Taha"
+        },
+        "number_of_ayah": 135,
+        "number_of_surah": 20,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue919"
+    },
+    {
+        "name": "Al-Anbiya",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u0646\u0628\u064a\u0627\u0621",
+            "en": "The Prophets",
+            "id": "Para Nabi"
+        },
+        "number_of_ayah": 112,
+        "number_of_surah": 21,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue91a"
+    },
+    {
+        "name": "Al-Hajj",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062d\u062c",
+            "en": "The Pilgrimage",
+            "id": "Haji"
+        },
+        "number_of_ayah": 78,
+        "number_of_surah": 22,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue91b"
+    },
+    {
+        "name": "Al-Muminun",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0624\u0645\u0646\u0648\u0646",
+            "en": "The Believers",
+            "id": "Orang-Orang Mukmin"
+        },
+        "number_of_ayah": 118,
+        "number_of_surah": 23,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue91c"
+    },
+    {
+        "name": "An-Nur",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0648\u0631",
+            "en": "The Light",
+            "id": "Cahaya"
+        },
+        "number_of_ayah": 64,
+        "number_of_surah": 24,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue91d"
+    },
+    {
+        "name": "Al-Furqan",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0641\u0631\u0642\u0627\u0646",
+            "en": "The Criterion",
+            "id": "Pembeda"
+        },
+        "number_of_ayah": 77,
+        "number_of_surah": 25,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue91e"
+    },
+    {
+        "name": "Ash-Shuara",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0634\u0639\u0631\u0627\u0621",
+            "en": "The Poets",
+            "id": "Para Penyair"
+        },
+        "number_of_ayah": 227,
+        "number_of_surah": 26,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue91f"
+    },
+    {
+        "name": "An-Naml",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0645\u0644",
+            "en": "The Ant",
+            "id": "Semut-semut"
+        },
+        "number_of_ayah": 93,
+        "number_of_surah": 27,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue920"
+    },
+    {
+        "name": "Al-Qasas",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0642\u0635\u0635",
+            "en": "The Stories",
+            "id": "Kisah-Kisah"
+        },
+        "number_of_ayah": 88,
+        "number_of_surah": 28,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue921"
+    },
+    {
+        "name": "Al-Ankabut",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0639\u0646\u0643\u0628\u0648\u062a",
+            "en": "The Spider",
+            "id": "Laba-Laba"
+        },
+        "number_of_ayah": 69,
+        "number_of_surah": 29,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue922"
+    },
+    {
+        "name": "Ar-Rum",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0631\u0648\u0645",
+            "en": "The Romans",
+            "id": "Romawi"
+        },
+        "number_of_ayah": 60,
+        "number_of_surah": 30,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue923"
+    },
+    {
+        "name": "Luqman",
+        "name_translations": {
+            "ar": "\u0644\u0642\u0645\u0627\u0646",
+            "en": "Luqman",
+            "id": "Luqman"
+        },
+        "number_of_ayah": 34,
+        "number_of_surah": 31,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue924"
+    },
+    {
+        "name": "As-Sajdah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0633\u062c\u062f\u0629",
+            "en": "The Prostration",
+            "id": "Sajdah"
+        },
+        "number_of_ayah": 30,
+        "number_of_surah": 32,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue925"
+    },
+    {
+        "name": "Al-Ahzab",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u062d\u0632\u0627\u0628",
+            "en": "The Clans",
+            "id": "Golongan Yang Bersekutu"
+        },
+        "number_of_ayah": 73,
+        "number_of_surah": 33,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue926"
+    },
+    {
+        "name": "Saba",
+        "name_translations": {
+            "ar": "\u0633\u0628\u0623",
+            "en": "Sheba",
+            "id": "Saba'"
+        },
+        "number_of_ayah": 54,
+        "number_of_surah": 34,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue92e"
+    },
+    {
+        "name": "Fatir",
+        "name_translations": {
+            "ar": "\u0641\u0627\u0637\u0631",
+            "en": "The Originator",
+            "id": "Maha Pencipta"
+        },
+        "number_of_ayah": 45,
+        "number_of_surah": 35,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue92f"
+    },
+    {
+        "name": "Yasin",
+        "name_translations": {
+            "ar": "\u064a\u0633",
+            "en": "Yaseen",
+            "id": "Yasin"
+        },
+        "number_of_ayah": 83,
+        "number_of_surah": 36,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue930"
+    },
+    {
+        "name": "As-Saffat",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0635\u0627\u0641\u0627\u062a",
+            "en": "Those drawn up in Ranks",
+            "id": "Barisan-Barisan"
+        },
+        "number_of_ayah": 182,
+        "number_of_surah": 37,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue931"
+    },
+    {
+        "name": "Sad",
+        "name_translations": {
+            "ar": "\u0635",
+            "en": "The letter Saad",
+            "id": "Sad"
+        },
+        "number_of_ayah": 88,
+        "number_of_surah": 38,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue909"
+    },
+    {
+        "name": "Az-Zumar",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0632\u0645\u0631",
+            "en": "The Groups",
+            "id": "Rombongan"
+        },
+        "number_of_ayah": 75,
+        "number_of_surah": 39,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue90a"
+    },
+    {
+        "name": "Ghafir",
+        "name_translations": {
+            "ar": "\u063a\u0627\u0641\u0631",
+            "en": "The Forgiver",
+            "id": "Maha Pengampun"
+        },
+        "number_of_ayah": 85,
+        "number_of_surah": 40,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue927"
+    },
+    {
+        "name": "Fussilat",
+        "name_translations": {
+            "ar": "\u0641\u0635\u0644\u062a",
+            "en": "Explained in detail",
+            "id": "Yang Dijelaskan"
+        },
+        "number_of_ayah": 54,
+        "number_of_surah": 41,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue928"
+    },
+    {
+        "name": "Ash-Shura",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0634\u0648\u0631\u0649",
+            "en": "Consultation",
+            "id": "Musyawarah"
+        },
+        "number_of_ayah": 53,
+        "number_of_surah": 42,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue929"
+    },
+    {
+        "name": "Az-Zukhruf",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0632\u062e\u0631\u0641",
+            "en": "Ornaments of gold",
+            "id": "Perhiasan"
+        },
+        "number_of_ayah": 89,
+        "number_of_surah": 43,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue92a"
+    },
+    {
+        "name": "Ad-Dukhan",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062f\u062e\u0627\u0646",
+            "en": "The Smoke",
+            "id": "Kabut"
+        },
+        "number_of_ayah": 59,
+        "number_of_surah": 44,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue92b"
+    },
+    {
+        "name": "Al-Jathiya",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062c\u0627\u062b\u064a\u0629",
+            "en": "Crouching",
+            "id": "Berlutut"
+        },
+        "number_of_ayah": 37,
+        "number_of_surah": 45,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue92c"
+    },
+    {
+        "name": "Al-Ahqaf",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u062d\u0642\u0627\u0641",
+            "en": "The Dunes",
+            "id": "Bukit Pasir"
+        },
+        "number_of_ayah": 35,
+        "number_of_surah": 46,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue92d"
+    },
+    {
+        "name": "Muhammad",
+        "name_translations": {
+            "ar": "\u0645\u062d\u0645\u062f",
+            "en": "Muhammad",
+            "id": "Muhammad"
+        },
+        "number_of_ayah": 38,
+        "number_of_surah": 47,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue932"
+    },
+    {
+        "name": "Al-Fath",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0641\u062a\u062d",
+            "en": "The Victory",
+            "id": "Kemenangan"
+        },
+        "number_of_ayah": 29,
+        "number_of_surah": 48,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue902"
+    },
+    {
+        "name": "Al-Hujurat",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062d\u062c\u0631\u0627\u062a",
+            "en": "The Inner Apartments",
+            "id": "Kamar-Kamar"
+        },
+        "number_of_ayah": 18,
+        "number_of_surah": 49,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue933"
+    },
+    {
+        "name": "Qaf",
+        "name_translations": {
+            "ar": "\u0642",
+            "en": "The letter Qaaf",
+            "id": "Qaf"
+        },
+        "number_of_ayah": 45,
+        "number_of_surah": 50,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue934"
+    },
+    {
+        "name": "Az-Zariyat",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0630\u0627\u0631\u064a\u0627\u062a",
+            "en": "The Winnowing Winds",
+            "id": "Angin yang Menerbangkan"
+        },
+        "number_of_ayah": 60,
+        "number_of_surah": 51,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue935"
+    },
+    {
+        "name": "At-Tur",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0637\u0648\u0631",
+            "en": "The Mount",
+            "id": "Bukit Tursina"
+        },
+        "number_of_ayah": 49,
+        "number_of_surah": 52,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue936"
+    },
+    {
+        "name": "An-Najm",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u062c\u0645",
+            "en": "The Star",
+            "id": "Bintang"
+        },
+        "number_of_ayah": 62,
+        "number_of_surah": 53,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue937"
+    },
+    {
+        "name": "Al-Qamar",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0642\u0645\u0631",
+            "en": "The Moon",
+            "id": "Bulan"
+        },
+        "number_of_ayah": 55,
+        "number_of_surah": 54,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue938"
+    },
+    {
+        "name": "Ar-Rahman",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0631\u062d\u0645\u0646",
+            "en": "The Beneficent",
+            "id": "Maha Pengasih"
+        },
+        "number_of_ayah": 78,
+        "number_of_surah": 55,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue939"
+    },
+    {
+        "name": "Al-Waqia",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0648\u0627\u0642\u0639\u0629",
+            "en": "The Inevitable",
+            "id": "Hari Kiamat"
+        },
+        "number_of_ayah": 96,
+        "number_of_surah": 56,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue93a"
+    },
+    {
+        "name": "Al-Hadid",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062d\u062f\u064a\u062f",
+            "en": "The Iron",
+            "id": "Besi"
+        },
+        "number_of_ayah": 29,
+        "number_of_surah": 57,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue93b"
+    },
+    {
+        "name": "Al-Mujadilah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u062c\u0627\u062f\u0644\u0629",
+            "en": "The Pleading Woman",
+            "id": "Gugatan"
+        },
+        "number_of_ayah": 22,
+        "number_of_surah": 58,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue93c"
+    },
+    {
+        "name": "Al-Hashr",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062d\u0634\u0631",
+            "en": "The Exile",
+            "id": "Pengusiran"
+        },
+        "number_of_ayah": 24,
+        "number_of_surah": 59,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue900"
+    },
+    {
+        "name": "Al-Mumtahinah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0645\u062a\u062d\u0646\u0629",
+            "en": "She that is to be examined",
+            "id": "Wanita Yang Diuji"
+        },
+        "number_of_ayah": 13,
+        "number_of_surah": 60,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue901"
+    },
+    {
+        "name": "As-Saff",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0635\u0641",
+            "en": "The Ranks",
+            "id": "Barisan"
+        },
+        "number_of_ayah": 14,
+        "number_of_surah": 61,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue941"
+    },
+    {
+        "name": "Al-Jumu'ah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062c\u0645\u0639\u0629",
+            "en": "Friday",
+            "id": "Jumat"
+        },
+        "number_of_ayah": 11,
+        "number_of_surah": 62,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue942"
+    },
+    {
+        "name": "Al-Munafiqun",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0646\u0627\u0641\u0642\u0648\u0646",
+            "en": "The Hypocrites",
+            "id": "Orang-Orang Munafik"
+        },
+        "number_of_ayah": 11,
+        "number_of_surah": 63,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue943"
+    },
+    {
+        "name": "At-Taghabun",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062a\u063a\u0627\u0628\u0646",
+            "en": "Mutual Disillusion",
+            "id": "Pengungkapan Kesalahan"
+        },
+        "number_of_ayah": 18,
+        "number_of_surah": 64,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue944"
+    },
+    {
+        "name": "At-Talaq",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0637\u0644\u0627\u0642",
+            "en": "Divorce",
+            "id": "Talak"
+        },
+        "number_of_ayah": 12,
+        "number_of_surah": 65,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue945"
+    },
+    {
+        "name": "At-Tahrim",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062a\u062d\u0631\u064a\u0645",
+            "en": "The Prohibition",
+            "id": "Pengharaman"
+        },
+        "number_of_ayah": 12,
+        "number_of_surah": 66,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue946"
+    },
+    {
+        "name": "Al-Mulk",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0644\u0643",
+            "en": "The Sovereignty",
+            "id": "Kerajaan"
+        },
+        "number_of_ayah": 30,
+        "number_of_surah": 67,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue947"
+    },
+    {
+        "name": "Al-Qalam",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0642\u0644\u0645",
+            "en": "The Pen",
+            "id": "Pena"
+        },
+        "number_of_ayah": 52,
+        "number_of_surah": 68,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue948"
+    },
+    {
+        "name": "Al-Haqqah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062d\u0627\u0642\u0629",
+            "en": "The Reality",
+            "id": "Hari Kiamat"
+        },
+        "number_of_ayah": 52,
+        "number_of_surah": 69,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue949"
+    },
+    {
+        "name": "Al-Ma'arij",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0639\u0627\u0631\u062c",
+            "en": "The Ascending Stairways",
+            "id": "Tempat Naik"
+        },
+        "number_of_ayah": 44,
+        "number_of_surah": 70,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue94a"
+    },
+    {
+        "name": "Nuh",
+        "name_translations": {
+            "ar": "\u0646\u0648\u062d",
+            "en": "Noah",
+            "id": "Nuh"
+        },
+        "number_of_ayah": 28,
+        "number_of_surah": 71,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue94b"
+    },
+    {
+        "name": "Al-Jinn",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062c\u0646",
+            "en": "The Jinn",
+            "id": "Jin"
+        },
+        "number_of_ayah": 28,
+        "number_of_surah": 72,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue94c"
+    },
+    {
+        "name": "Al-Muzzammil",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0632\u0645\u0644",
+            "en": "The Enshrouded One",
+            "id": "Orang Yang Berselimut"
+        },
+        "number_of_ayah": 20,
+        "number_of_surah": 73,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue94d"
+    },
+    {
+        "name": "Al-Muddaththir",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u062f\u062b\u0631",
+            "en": "The Cloaked One",
+            "id": "Orang Yang Berkemul"
+        },
+        "number_of_ayah": 56,
+        "number_of_surah": 74,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue94e"
+    },
+    {
+        "name": "Al-Qiyamah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0642\u064a\u0627\u0645\u0629",
+            "en": "The Resurrection",
+            "id": "Hari Kiamat"
+        },
+        "number_of_ayah": 40,
+        "number_of_surah": 75,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue94f"
+    },
+    {
+        "name": "Al-Insan",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0625\u0646\u0633\u0627\u0646",
+            "en": "Man",
+            "id": "Manusia"
+        },
+        "number_of_ayah": 31,
+        "number_of_surah": 76,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue950"
+    },
+    {
+        "name": "Al-Mursalat",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0631\u0633\u0644\u0627\u062a",
+            "en": "The Emissaries",
+            "id": "Malaikat Yang Diutus"
+        },
+        "number_of_ayah": 50,
+        "number_of_surah": 77,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue951"
+    },
+    {
+        "name": "An-Naba",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0628\u0623",
+            "en": "The Announcement",
+            "id": "Berita Besar"
+        },
+        "number_of_ayah": 40,
+        "number_of_surah": 78,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue952"
+    },
+    {
+        "name": "An-Naziat",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0627\u0632\u0639\u0627\u062a",
+            "en": "Those who drag forth",
+            "id": "Malaikat Yang Mencabut"
+        },
+        "number_of_ayah": 46,
+        "number_of_surah": 79,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue93d"
+    },
+    {
+        "name": "Abasa",
+        "name_translations": {
+            "ar": "\u0639\u0628\u0633",
+            "en": "He frowned",
+            "id": "Bermuka Masam"
+        },
+        "number_of_ayah": 42,
+        "number_of_surah": 80,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue93e"
+    },
+    {
+        "name": "At-Takwir",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062a\u0643\u0648\u064a\u0631",
+            "en": "The Overthrowing",
+            "id": "Penggulungan"
+        },
+        "number_of_ayah": 29,
+        "number_of_surah": 81,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue93f"
+    },
+    {
+        "name": "Al-Infitar",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0625\u0646\u0641\u0637\u0627\u0631",
+            "en": "The Cleaving",
+            "id": "Terbelah"
+        },
+        "number_of_ayah": 19,
+        "number_of_surah": 82,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue940"
+    },
+    {
+        "name": "Al-Mutaffifin",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0637\u0641\u0641\u064a\u0646",
+            "en": "Defrauding",
+            "id": "Orang-Orang Curang"
+        },
+        "number_of_ayah": 36,
+        "number_of_surah": 83,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue953"
+    },
+    {
+        "name": "Al-Inshiqaq",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0625\u0646\u0634\u0642\u0627\u0642",
+            "en": "The Splitting Open",
+            "id": "Terbelah"
+        },
+        "number_of_ayah": 25,
+        "number_of_surah": 84,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue954"
+    },
+    {
+        "name": "Al-Buruj",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0628\u0631\u0648\u062c",
+            "en": "The Constellations",
+            "id": "Gugusan Bintang"
+        },
+        "number_of_ayah": 22,
+        "number_of_surah": 85,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue955"
+    },
+    {
+        "name": "At-Tariq",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0637\u0627\u0631\u0642",
+            "en": "The Morning Star",
+            "id": "Yang Datang Di Malam Hari"
+        },
+        "number_of_ayah": 17,
+        "number_of_surah": 86,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue956"
+    },
+    {
+        "name": "Al-Ala",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0623\u0639\u0644\u0649",
+            "en": "The Most High",
+            "id": "Maha Tinggi"
+        },
+        "number_of_ayah": 19,
+        "number_of_surah": 87,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue957"
+    },
+    {
+        "name": "Al-Ghashiyah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u063a\u0627\u0634\u064a\u0629",
+            "en": "The Overwhelming",
+            "id": "Hari Kiamat"
+        },
+        "number_of_ayah": 26,
+        "number_of_surah": 88,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue958"
+    },
+    {
+        "name": "Al-Fajr",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0641\u062c\u0631",
+            "en": "The Dawn",
+            "id": "Fajar"
+        },
+        "number_of_ayah": 30,
+        "number_of_surah": 89,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue959"
+    },
+    {
+        "name": "Al-Balad",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0628\u0644\u062f",
+            "en": "The City",
+            "id": "Negeri"
+        },
+        "number_of_ayah": 20,
+        "number_of_surah": 90,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue95a"
+    },
+    {
+        "name": "Ash-Shams",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0634\u0645\u0633",
+            "en": "The Sun",
+            "id": "Matahari"
+        },
+        "number_of_ayah": 15,
+        "number_of_surah": 91,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue95b"
+    },
+    {
+        "name": "Al-Lail",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0644\u064a\u0644",
+            "en": "The Night",
+            "id": "Malam"
+        },
+        "number_of_ayah": 21,
+        "number_of_surah": 92,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue95c"
+    },
+    {
+        "name": "Ad-Duha",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0636\u062d\u0649",
+            "en": "The Morning Hours",
+            "id": "Duha"
+        },
+        "number_of_ayah": 11,
+        "number_of_surah": 93,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue95d"
+    },
+    {
+        "name": "Ash-Sharh",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0634\u0631\u062d",
+            "en": "The Consolation",
+            "id": "Lapang"
+        },
+        "number_of_ayah": 8,
+        "number_of_surah": 94,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue95e"
+    },
+    {
+        "name": "At-Tin",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062a\u064a\u0646",
+            "en": "The Fig",
+            "id": "Buah Tin"
+        },
+        "number_of_ayah": 8,
+        "number_of_surah": 95,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue95f"
+    },
+    {
+        "name": "Al-Alaq",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0639\u0644\u0642",
+            "en": "The Clot",
+            "id": "Segumpal Darah"
+        },
+        "number_of_ayah": 19,
+        "number_of_surah": 96,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue960"
+    },
+    {
+        "name": "Al-Qadr",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0642\u062f\u0631",
+            "en": "The Power, Fate",
+            "id": "Kemuliaan"
+        },
+        "number_of_ayah": 5,
+        "number_of_surah": 97,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue961"
+    },
+    {
+        "name": "Al-Bayinah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0628\u064a\u0646\u0629",
+            "en": "The Evidence",
+            "id": "Bukti Nyata"
+        },
+        "number_of_ayah": 8,
+        "number_of_surah": 98,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue962"
+    },
+    {
+        "name": "Az-Zalzalah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0632\u0644\u0632\u0644\u0629",
+            "en": "The Earthquake",
+            "id": "Guncangan"
+        },
+        "number_of_ayah": 8,
+        "number_of_surah": 99,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue963"
+    },
+    {
+        "name": "Al-Adiyat",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0639\u0627\u062f\u064a\u0627\u062a",
+            "en": "The Chargers",
+            "id": "Kuda Yang Berlari Kencang"
+        },
+        "number_of_ayah": 11,
+        "number_of_surah": 100,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue964"
+    },
+    {
+        "name": "Al-Qariah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0642\u0627\u0631\u0639\u0629",
+            "en": "The Calamity",
+            "id": "Hari Kiamat"
+        },
+        "number_of_ayah": 11,
+        "number_of_surah": 101,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue965"
+    },
+    {
+        "name": "Al-Takathur",
+        "name_translations": {
+            "ar": "\u0627\u0644\u062a\u0643\u0627\u062b\u0631",
+            "en": "Competition",
+            "id": "Bermegah-Megahan"
+        },
+        "number_of_ayah": 8,
+        "number_of_surah": 102,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue966"
+    },
+    {
+        "name": "Al-Asr",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0639\u0635\u0631",
+            "en": "The Declining Day, Epoch",
+            "id": "Asar"
+        },
+        "number_of_ayah": 3,
+        "number_of_surah": 103,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue967"
+    },
+    {
+        "name": "Al-Humazah",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0647\u0645\u0632\u0629",
+            "en": "The Traducer",
+            "id": "Pengumpat"
+        },
+        "number_of_ayah": 9,
+        "number_of_surah": 104,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue968"
+    },
+    {
+        "name": "Al-Fil",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0641\u064a\u0644",
+            "en": "The Elephant",
+            "id": "Gajah"
+        },
+        "number_of_ayah": 5,
+        "number_of_surah": 105,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue969"
+    },
+    {
+        "name": "Quraish",
+        "name_translations": {
+            "ar": "\u0642\u0631\u064a\u0634",
+            "en": "Quraysh",
+            "id": "Quraisy"
+        },
+        "number_of_ayah": 4,
+        "number_of_surah": 106,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue96a"
+    },
+    {
+        "name": "Al-Ma'un",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0627\u0639\u0648\u0646",
+            "en": "Almsgiving",
+            "id": "Barang Yang Berguna"
+        },
+        "number_of_ayah": 7,
+        "number_of_surah": 107,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue96b"
+    },
+    {
+        "name": "Al-Kauthar",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0643\u0648\u062b\u0631",
+            "en": "Abundance",
+            "id": "Pemberian Yang Banyak"
+        },
+        "number_of_ayah": 3,
+        "number_of_surah": 108,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue96c"
+    },
+    {
+        "name": "Al-Kafirun",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0643\u0627\u0641\u0631\u0648\u0646",
+            "en": "The Disbelievers",
+            "id": "Orang-Orang kafir"
+        },
+        "number_of_ayah": 6,
+        "number_of_surah": 109,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue96d"
+    },
+    {
+        "name": "An-Nasr",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0635\u0631",
+            "en": "Divine Support",
+            "id": "Pertolongan"
+        },
+        "number_of_ayah": 3,
+        "number_of_surah": 110,
+        "place": "Medina",
+        "type": "Madaniyah",
+        "ico_unicode": "\ue96e"
+    },
+    {
+        "name": "Al-Masad",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0645\u0633\u062f",
+            "en": "The Palm Fibre",
+            "id": "Api Yang Bergejolak"
+        },
+        "number_of_ayah": 5,
+        "number_of_surah": 111,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue96f"
+    },
+    {
+        "name": "Al-Ikhlas",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0625\u062e\u0644\u0627\u0635",
+            "en": "Sincerity",
+            "id": "Ikhlas"
+        },
+        "number_of_ayah": 4,
+        "number_of_surah": 112,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue970"
+    },
+    {
+        "name": "Al-Falaq",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0641\u0644\u0642",
+            "en": "The Dawn",
+            "id": "Subuh"
+        },
+        "number_of_ayah": 5,
+        "number_of_surah": 113,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue971"
+    },
+    {
+        "name": "An-Nas",
+        "name_translations": {
+            "ar": "\u0627\u0644\u0646\u0627\u0633",
+            "en": "Mankind",
+            "id": "Manusia"
+        },
+        "number_of_ayah": 6,
+        "number_of_surah": 114,
+        "place": "Mecca",
+        "type": "Makkiyah",
+        "ico_unicode": "\ue972"
+    }
+]

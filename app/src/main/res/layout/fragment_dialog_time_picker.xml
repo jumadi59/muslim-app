@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:textAlignment="gravity"
+            android:gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+            android:layout_marginStart="16dp"
+            android:text="@string/correction_manual"/>
+
+        <cn.carbswang.android.numberpickerview.library.NumberPickerView
+            android:id="@+id/picker"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@id/tv_title"
+            android:layout_centerHorizontal="true"
+            app:npv_ItemPaddingHorizontal="5dp"
+            app:npv_ItemPaddingVertical="5dp"
+            app:npv_RespondChangeOnDetached="false"
+            app:npv_TextColorSelected="@color/color_primary"
+            app:npv_ShownCount="5"
+            app:npv_TextSizeNormal="@dimen/tv_big"
+            app:npv_TextSizeSelected="20sp"
+            app:npv_WrapSelectorWheel="true"
+            app:npv_ShowDivider="false" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.App.Button.Outlined"
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_6"
+            android:layout_below="@id/picker"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="@dimen/margin_8"
+            app:strokeWidth="0dp"
+            app:cornerRadius="0dp"
+            android:text="@android:string/ok"
+            android:textAllCaps="true" />
+    </RelativeLayout>
+</layout>

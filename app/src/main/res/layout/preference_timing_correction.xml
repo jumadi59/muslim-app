@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.setting.TimingCorrectionPreference">
+
+        <include
+            android:id="@+id/layout_appbar"
+            layout="@layout/layout_appbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/fajr"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/fajr}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/dhuhr"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/dhuhr}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/asr"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/asr}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/maghrib"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/maghrib}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/isha"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/isha}"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

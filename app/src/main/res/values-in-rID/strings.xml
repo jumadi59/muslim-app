@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_al_quran">Al-Qur\'an</string>
+    <string name="title_asmaul_husna">Asmaul Husna</string>
+    <string name="title_cari_hadist">Cari hadist</string>
+    <string name="title_kiblat">Kiblat</string>
+    <string name="title_search_location">Pilih Lokasi</string>
+    <string name="title_search_surah">Pilih Surah</string>
+    <string name="title_surah">Surah</string>
+    <string name="title_bookmark">Ditandai</string>
+    <string name="title_settings">Pengaturan</string>
+    <string name="title_about">Tentang</string>
+    <string name="title_hijri_date">Kalender Hijriah</string>
+    <string name="title_tasbih_counter">Tasbih Counter</string>
+    <string name="title_initialize">Welcome to Muslim App</string>
+    <string name="description_initialize">Welcome to Muslim App</string>
+    <string name="location_not_found">Lokasi tidak diketahui</string>
+
+    <string name="location">Lokasi</string>
+    <string name="next_prayer_time">Waktu Sholat Selanjutnya</string>
+    <string name="search_surah">Cari surah</string>
+    <string name="search_city">Cari Lokasi</string>
+    <string name="enter_update_location">Klik untuk mengubah lokasi</string>
+    <string name="location_now">Lokasi Saat ini</string>
+
+    <string name="basmallah">بِسْـــــمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِِ</string>
+    <string name="basmallah_latin">bismi <strong>al</strong>l<u>aa</u>hi <strong>al</strong>rra<u>h</u>m<u>aa</u>ni <strong>al</strong>rra<u>h</u>iim<strong>i</strong></string>
+    <string name="basmallah_translation">Dengan menyebut nama Allah Yang Maha Pemurah lagi Maha Penyayang.</string>
+
+    <string name="title_info">Info</string>
+    <string name="mode_book">Mode Book</string>
+    <string name="number">Nomor %s</string>
+
+    <string name="description_error">Silakan coba lagi</string>
+    <string name="title_error">Terjadi kesalahan koneksi</string>
+
+    <string name="title_not_found">%s tidak ditemukan</string>
+    <string name="title_search_not_found">Hasil pencarian tidak ditemukan.</string>
+    <string name="title_error_server">Terjadi kesalahan di Server,</string>
+    <string name="description_error_server">Coba lagi nanti</string>
+    <string name="description_search_hadist">Masukan kata kunci minimal 1 kata</string>
+
+    <string name="error_permission_location">Aplikasi ini tidak diberi izin untuk mengakses lokasi anda.</string>
+
+    <string name="message_kiblat">Harap tempatkan ponsel anda secara mendatar.</string>
+    <string name="retry">Coba Lagi</string>
+
+    <string name="message_delete_bookmark">Item telah dihapus dari penanda..</string>
+    <string name="undo">Batal</string>
+
+    <string name="message_empty_bookmark">Belum ada ayat yang di tandai.</string>
+    <string name="title_empty_bookmark">Bookmark kosong</string>
+
+    <string name="enter_hadist">Masukan kata kunci hadist</string>
+    <string name="ayah">Ayat %s</string>
+    <string name="notification_body_adzan">Sekarang waktunya salat %s.</string>
+    <string name="notification_body">Sekarang waktunya %s.</string>
+    <string name="alarm_timed_before_adzan">%s menit lagi saatnya salat %s</string>
+    <string name="alarm_timed_before">%s menit lagi saatnya %s</string>
+    <string name="notification_tashbih">Penghitung Tasbih: %s - Ketuk untuk melanjutkan</string>
+
+    <string name="north">U</string>
+    <string name="south">S</string>
+    <string name="west">B</string>
+    <string name="east">T</string>
+
+    <string name="adzan">Adzan</string>
+    <string name="imsak">Imsak</string>
+    <string name="fajr">Shubu</string>
+    <string name="sunrise">Terbit</string>
+    <string name="dhuha">Dhuha</string>
+    <string name="dhuhr">Dzuhur</string>
+    <string name="asr">Ashar</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isya</string>
+
+    <string name="save">Simpan</string>
+    <string name="close">Tutup</string>
+    <string name="time_now_shalat">Waktunya Salat %s</string>
+    <string name="alarm_adzan">Pengingat Adzan</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="alarm_shalat_now">Ingatkan waktu salat</string>
+    <string name="alarm_before_time_salat">Ingatkan %s menit sebelum salat</string>
+    <string name="correction_timing_adzan">Koreksi Waktu Adzan</string>
+    <string name="correct">Tepat</string>
+    <string name="minute">%s Menit</string>
+    <string name="correction_manual">Koreksi Manual</string>
+    <string name="more_menu">More menu</string>
+    <string name="day_now">Hari ini</string>
+    <string name="next_month">Bulan berikutnya</string>
+    <string name="prev_month">Bulan Sebelumnya</string>
+    <string name="cancel">Batal</string>
+    <string name="hint_max_counter">Jumlah terget</string>
+    <string name="target_counter">Target Counter</string>
+    <string name="helper_text_input_counter">* Isi 0 untuk menonaktifkan target</string>
+    <string name="switch_calendar_mode">Switch Calendar Mode</string>
+    <string name="tafsir_surah_verse">Tafsir %s: %s</string>
+    <string name="share_ayat">Bagikan Ayat</string>
+</resources>

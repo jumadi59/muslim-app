@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FlexBoxLayout">
+        <attr name="viewPartMain" format="reference" />
+        <attr name="viewPartSlave" format="reference" />
+    </declare-styleable>
+
+
+</resources>

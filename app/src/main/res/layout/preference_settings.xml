@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.setting.SettingsActivity">
+
+        <include
+            android:id="@+id/layout_appbar"
+            layout="@layout/layout_appbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/layout_item_pref_category"
+                    app:title="@{@string/adzan}"/>
+
+                <include
+                    android:id="@+id/alarm_adzan"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/alarm_adzan}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/corrount_adzan"
+                    layout="@layout/layout_item_pref_more"
+                    app:title="@{@string/correction_timing_adzan}"/>
+
+                <include
+                    layout="@layout/layout_item_pref_category"
+                    app:title="@{@string/title_about}"/>
+
+                <include
+                    android:id="@+id/about"
+                    layout="@layout/layout_item_pref"
+                    app:title="@{@string/title_about}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/donate"
+                    layout="@layout/layout_item_pref"
+                    app:title="@{`Donate`}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/rate"
+                    layout="@layout/layout_item_pref"
+                    app:title="@{`Rate App`}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/divider" />
+
+                <include
+                    android:id="@+id/more"
+                    layout="@layout/layout_item_pref"
+                    app:title="@{`More App`}"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

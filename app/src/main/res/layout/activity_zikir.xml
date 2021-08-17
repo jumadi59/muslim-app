@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.zikir.ZikirActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:stateListAnimator="@animator/appbar_elevation"
+            android:theme="@style/Theme.IslamicApp.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_16"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <ImageView
+                android:id="@+id/btn_reset"
+                style="?attr/actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_sync_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_counter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/btn_vibrate"
+                style="?attr/actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_vibrate"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_reset"
+                app:layout_constraintStart_toEndOf="@+id/btn_reset"
+                app:layout_constraintTop_toTopOf="@+id/btn_reset"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toStartOf="@+id/btn_reverse"
+                app:layout_constraintStart_toEndOf="@+id/btn_reset"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3" />
+
+            <TextView
+                android:id="@+id/tv_max_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/tv_big2"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_counter"
+                app:layout_constraintStart_toEndOf="@+id/tv_counter"
+                app:layout_constraintTop_toTopOf="@+id/tv_counter"
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="/33" />
+
+            <ImageView
+                android:id="@+id/btn_reverse"
+                style="?attr/actionButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_all_inclusive_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_counter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                app:tint="@color/grey" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/ic_baseline_add_24"
+                app:tint="@color/white"
+                android:background="@color/color_primary"
+                android:padding="@dimen/margin_8"
+                app:fabCustomSize="180dp"
+                app:maxImageSize="80dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.39"
+                app:rippleColor="@color/accent_translucent"
+                tools:ignore="ContentDescription" />
+
+            <include
+                android:id="@+id/layout_ad"
+                layout="@layout/layout_ad_bannner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

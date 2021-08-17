@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_16"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/target_counter"
+            android:textSize="@dimen/tv_big"
+            android:textColor="@color/color_primary"
+            android:layout_marginBottom="@dimen/margin_16"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.App.TextInputLayout"
+            android:id="@+id/text_input_layout"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_max_counter"
+            app:helperTextEnabled="true"
+            app:helperText="@string/helper_text_input_counter">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/tv_normal"
+                android:inputType="number"
+                android:singleLine="true"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save"
+                style="@style/Widget.App.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="true"
+                app:strokeWidth="0dp"
+                android:text="@string/set"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel"
+                style="@style/Widget.App.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/btn_save"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:textAllCaps="true"
+                app:strokeWidth="0dp"
+                android:text="@string/cancel"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

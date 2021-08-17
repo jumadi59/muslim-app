@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="names"
+            type="com.jumbox.app.muslim.vo.NameAllah" />
+    </data>
+
+    <com.wajahatkarim3.easyflipview.EasyFlipView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flipOnTouch="false"
+        app:flipEnabled="true"
+        app:flipDuration="400"
+        app:flipFrom="right"
+        app:flipType="horizontal"
+        app:autoFlipBack="false"
+        app:autoFlipBackTime="1000"
+        android:clipToPadding="false"
+        android:padding="@dimen/margin_16"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardPreventCornerOverlap="true"
+            app:cardCornerRadius="8dp"
+            android:clipToPadding="false"
+            app:cardUseCompatPadding="false"
+            app:cardBackgroundColor="@color/white">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:textSize="@dimen/tv_normal"
+                    android:textAlignment="center"
+                    android:padding="@dimen/margin_16"
+                    app:htmlFormat="@{names.description}"
+                    tools:text="Al Malik (الملك)mempunyai arti Allah SWT berkuasa atas segala sesuatu yang baik dalam hal untuk memerintah dan melarang. Al Malik juga mempunyai makna sesuatu. Segala sesuatu hanya butuh kepada Allah SWT sedangkan untuk Allah tidak akan butuh segala sesuatu."/>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardPreventCornerOverlap="true"
+            app:cardCornerRadius="8dp"
+            app:cardUseCompatPadding="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tint_background_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_gradient_round"
+                android:backgroundTintMode="screen"
+                tools:backgroundTint="#6534b4">
+
+                <TextView
+                    android:id="@+id/tv_number_of"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_big"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="20 of 99" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:fontFamily="@font/allah_names"
+                    android:text="@{names.unicode.empty ? names.arabic : names.unicode}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="rtl"
+                    android:textSize="120sp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_translation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_number_of"
+                    tools:text="\u00a3"/>
+
+                <TextView
+                    android:id="@+id/tv_latin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:text="@{names.latin}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_big"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    tools:text="As Shabuur" />
+
+                <TextView
+                    android:id="@+id/tv_translation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:layout_marginBottom="32dp"
+                    android:text="@{names.translationID}"
+                    app:textEN="@{names.translationEN}"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/tv_normal"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Yang Memiliki Mutlak sifat YangMenyempitkan (makhluknya)" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+</layout>

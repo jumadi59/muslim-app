@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name" translatable="false">Muslim App</string>
+
+    <string name="ad_unit_id_app" translatable="false">ca-app-pub-9680986753260928~1516938443</string>
+    <string name="ad_unit_id_native_advanced" translatable="false">ca-app-pub-9680986753260928/2422826004</string>
+    <string name="ad_unit_id_open_app" translatable="false">ca-app-pub-9680986753260928/1684459401</string>
+    <string name="ad_unit_id_banner" translatable="false">ca-app-pub-9680986753260928/5489666994</string>
+
+    <string name="title_al_quran">Al-Qur\'an</string>
+    <string name="title_asmaul_husna">99 Names</string>
+    <string name="title_cari_hadist">Search hadist</string>
+    <string name="title_kiblat">Qibla</string>
+    <string name="title_search_location">Select location</string>
+    <string name="title_search_surah">Select Surah</string>
+    <string name="title_surah">Surah</string>
+    <string name="title_bookmark">Bookmark</string>
+    <string name="title_settings">Setting</string>
+    <string name="title_about">About</string>
+    <string name="title_hijri_date">Hijri Date</string>
+    <string name="title_tasbih_counter">Tasbih Counter</string>
+    <string name="title_initialize">Welcome to Muslim App</string>
+    <string name="description_initialize">Welcome to Muslim App</string>
+    <string name="location_not_found">Location unknown</string>
+
+    <string name="loading" translatable="false">Loading...</string>
+    <string name="location">Location</string>
+    <string name="next_prayer_time">Next Prayer Time</string>
+    <string name="search_surah">Search surah</string>
+    <string name="search_city">Search Location</string>
+    <string name="enter_update_location">Click to change location</string>
+    <string name="location_now">Current location</string>
+
+    <string name="basmallah">بِسْـــــمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِِ</string>
+    <string name="basmallah_latin">bismi <strong>al</strong>l<u>aa</u>hi <strong>al</strong>rra<u>h</u>m<u>aa</u>ni <strong>al</strong>rra<u>h</u>iim<strong>i</strong></string>
+    <string name="basmallah_translation">In the name of Allah, the Entirely Merciful, the Especially Merciful.</string>
+
+    <string name="title_info">Info</string>
+    <string name="mode_book">Mode Book</string>
+    <string name="number">Nomor %s</string>
+
+    <string name="description_error">Please try again.</string>
+    <string name="title_error">A connection error occurred</string>
+
+    <string name="title_not_found">%s not found</string>
+    <string name="title_search_not_found">Search results were not found</string>
+    <string name="title_error_server">An error occurred on the server.</string>
+    <string name="description_error_server">Try again</string>
+    <string name="description_search_hadist">Enter a keyword of at least 1 word.</string>
+
+    <string name="error_permission_location">This application is not given permission to access your location.</string>
+
+    <string name="message_kiblat">Hope place your phone horizontally.</string>
+    <string name="retry">Retry</string>
+
+    <string name="message_delete_bookmark">The item has been removed from the bookmark.</string>
+    <string name="undo">Undo</string>
+
+    <string name="message_empty_bookmark">There are no marked verses yet.</string>
+    <string name="title_empty_bookmark">Empty bookmark</string>
+
+    <string name="enter_hadist">Enter the keywords hadits</string>
+    <string name="ayah">Aya %s</string>
+    <string name="notification_body_adzan">It is time for %s prayers.</string>
+    <string name="notification_body">It is time for %s.</string>
+    <string name="alarm_timed_before_adzan">%s minutes to pray %s</string>
+    <string name="alarm_timed_before">%s minutes to go %s</string>
+    <string name="notification_tashbih">Tasbih Counter: %s - Tab to continue</string>
+
+    <string name="north">N</string>
+    <string name="south">S</string>
+    <string name="west">W</string>
+    <string name="east">E</string>
+
+    <string name="adzan">Adhan</string>
+    <string name="imsak">Imsak</string>
+    <string name="fajr">Fajr</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="dhuha">Dhuha</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isha</string>
+
+    <string name="description_about" translatable="false">Jika anda menemukan ada suatu kesalahan yang ada pada aplikasi ini, mohon untuk menghubungi saya melalui email di <a href="mailto:muslim.app@jumadi59.com">muslim.app@jumadi59.com</a>.</string>
+
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+    <string name="time_now_shalat">Prayer time %s</string>
+    <string name="alarm_adzan">Adhan reminders</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="alarm_shalat_now">Reminds prayer time</string>
+    <string name="alarm_before_time_salat">Remind %s minutes before prayer</string>
+    <string name="correction_timing_adzan">Adhan Time Correction</string>
+    <string name="correct">Right</string>
+    <string name="minute">%s Minute</string>
+    <string name="correction_manual">Manual Correction</string>
+    <string name="more_menu">More menu</string>
+    <string name="day_now">Today</string>
+    <string name="next_month">Next Month</string>
+    <string name="prev_month">Prev Month</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_max_counter">Target Number</string>
+    <string name="target_counter">Target Counter</string>
+    <string name="helper_text_input_counter">* Fill 0 to disable target</string>
+    <string name="set" translatable="false">Set</string>
+    <string name="switch_calendar_mode">Switch Calendar Mode</string>
+    <string name="share_ayat">Share Ayat</string>
+    <string name="tafsir_ayat" translatable="false">Tafsir ayat</string>
+    <string name="tafsir_surah_verse">Tafsir %s: %s</string>
+    <string name="source" translatable="false">Source:</string>
+</resources>

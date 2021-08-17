@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_switch_mode"
+        android:icon="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:title="@string/switch_calendar_mode"
+        app:showAsAction="always" />
+
+</menu>

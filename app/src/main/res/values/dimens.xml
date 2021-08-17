@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="app_bar_height">380dp</dimen>
+    <dimen name="app_bar_height_min">350dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="card_elevation">12dp</dimen>
+
+    <dimen name="tv_small">12sp</dimen>
+    <dimen name="tv_super_small">10sp</dimen>
+    <dimen name="tv_normal">14sp</dimen>
+    <dimen name="tv_big">16sp</dimen>
+    <dimen name="tv_big2">18sp</dimen>
+    <dimen name="tv_super_big">22sp</dimen>
+    <dimen name="tv_max_big">25sp</dimen>
+    <dimen name="tv_quran">26sp</dimen>
+</resources>
