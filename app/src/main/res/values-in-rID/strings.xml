@@ -98,4 +98,8 @@
     <string name="switch_calendar_mode">Switch Calendar Mode</string>
     <string name="tafsir_surah_verse">Tafsir %s: %s</string>
     <string name="share_ayat">Bagikan Ayat</string>
+    <string name="title_other">Lainnya</string>
+    <string name="donate">Donasi Untuk Developer</string>
+    <string name="more_app">Aplikasi Lainnya</string>
+    <string name="rate_app">Beri Rating Aplikasi</string>
 </resources>
