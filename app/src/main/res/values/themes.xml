@@ -24,6 +24,8 @@
     <style name="Theme.IslamicApp.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/black</item>
     </style>
 
     <style name="Theme.IslamicApp.NoActionBarDark">
