@@ -371,22 +371,19 @@
                                 android:gravity="center_horizontal"
                                 tools:ignore="UseCompoundDrawables">
 
-                                <TextView
+                                <ImageView
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:layout_marginStart="@dimen/margin_8"
-                                    android:layout_marginTop="@dimen/margin_8"
                                     android:layout_marginEnd="@dimen/margin_8"
+                                    android:layout_marginTop="@dimen/margin_8"
                                     android:background="@drawable/background_menu"
-                                    android:backgroundTint="#e48f14"
+                                    android:backgroundTint="#2794db"
                                     android:backgroundTintMode="screen"
-                                    android:textAlignment="gravity"
-                                    android:gravity="center"
-                                    android:fontFamily="@font/allah_names"
-                                    android:textColor="@color/white"
-                                    android:textSize="32sp"
-                                    android:text="1"
-                                    tools:ignore="ContentDescription" />
+                                    android:padding="16dp"
+                                    android:src="@drawable/ic_allah"
+                                    tools:ignore="ContentDescription"
+                                    app:tint="@color/white" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
