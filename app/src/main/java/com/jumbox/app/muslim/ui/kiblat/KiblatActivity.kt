@@ -100,7 +100,7 @@ class KiblatActivity : BaseActivity<ActivityKiblatBinding, MainViewModel>(), Mul
     }
 
     private fun compass() {
-        GlobalScope.launch(Dispatchers.Default) {
+        GlobalScope.launch(Dispatchers.Main) {
             delay(100)
             if (gps.location == null) {
                 if (gps.retry()) {
