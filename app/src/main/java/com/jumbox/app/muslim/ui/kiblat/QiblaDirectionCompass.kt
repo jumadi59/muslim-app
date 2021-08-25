@@ -18,9 +18,9 @@ class QiblaDirectionCompass(
     private val compassListener: (Float, Float, Float, Float) -> Unit
 ) : SensorEventListener {
 
-    private val sensorManager: SensorManager = (context.getSystemService(SENSOR_SERVICE) as SensorManager)
-    private var accelerometerSensor: Sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
-    private var magnetSensor: Sensor = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+    private var sensorManager: SensorManager = (context.getSystemService(SENSOR_SERVICE) as SensorManager)
+    private var accelerometerSensor: Sensor? = null
+    private var magnetSensor: Sensor? = null
     private val aData = FloatArray(3)
     private val mData = FloatArray(3)
     private val r = FloatArray(9)
@@ -28,6 +28,16 @@ class QiblaDirectionCompass(
     var userLoc: Location? = null
     private var currentDegree = 0f
     private var currentDegreeNeedle = 0f
+
+    init {
+        try {
+            accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+            magnetSensor = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(context, e.message, Toast.LENGTH_LONG).show()
+        }
+    }
 
     fun onCreate() {
         sensorManager.registerListener(this, accelerometerSensor, SensorManager.SENSOR_DELAY_GAME)
