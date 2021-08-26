@@ -14,6 +14,9 @@ import com.jumbox.app.muslim.databinding.LayoutItemStepGroupBinding
 import com.jumbox.app.muslim.utils.gone
 import com.jumbox.app.muslim.utils.visible
 import com.jumbox.app.muslim.vo.Kitab
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 /**
  * Created by Jumadi Janjaya date on 16/04/2021.
@@ -44,7 +47,9 @@ class HadistAdapter(private val callbackClick: (kitab: String, id: Int) -> Unit)
 
     override fun submitList(list: List<Kitab>?) {
         currentItemExpand = null
-        super.submitList(list)
+        GlobalScope.launch(Dispatchers.Main) {
+            super.submitList(list)
+        }
     }
 
     override fun bind(binding: LayoutItemStepGroupBinding, item: Kitab?) {
