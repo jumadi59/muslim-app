@@ -4,13 +4,9 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
-import android.graphics.Color
+import android.graphics.*
 import android.net.Uri
 import android.os.IBinder
-import android.text.Editable
-import android.text.SpannableStringBuilder
-import android.text.Spanned
-import android.text.TextWatcher
 import android.text.style.ClickableSpan
 import android.text.style.URLSpan
 import android.view.View
@@ -38,6 +34,12 @@ import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
+
+import android.graphics.Paint.ANTI_ALIAS_FLAG
+import android.graphics.fonts.Font
+import android.text.*
+import android.widget.ImageView
+
 
 /**
  * Created by Jumadi Janjaya date on 07/04/2021.
@@ -272,4 +274,22 @@ fun Activity.createViewAdBanner(layout: LayoutAdBannnerBinding) {
             (layout.root as ViewGroup).addView(this)
         }
     }
+}
+
+fun ImageView.setTextAsBitmap(text: String, textSize: Float? = 20f, textColor: Int? = Color.WHITE, typeface: Typeface?): Bitmap {
+    // adapted from https://stackoverflow.com/a/8799344/1476989
+    val paint = TextPaint(ANTI_ALIAS_FLAG)
+    paint.textSize = textSize?: 20f
+    paint.color = textColor?: Color.WHITE
+    paint.textAlign = Paint.Align.RIGHT
+    paint.typeface = typeface
+    val baseline: Float = -paint.ascent() // ascent() is negative
+    var width = (paint.measureText(text) + 0.0f).toInt() // round
+    var height = (baseline + paint.descent() + 0.0f).toInt()
+    if (width > height) height = width else width = height
+    val image = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+    val canvas = Canvas(image)
+    canvas.drawText(text, (width/10f), baseline, paint)
+    setImageBitmap(image)
+    return image
 }

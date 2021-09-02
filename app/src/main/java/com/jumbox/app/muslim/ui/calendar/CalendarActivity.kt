@@ -24,6 +24,9 @@ import com.jumbox.app.muslim.vo.HighlightDay
 import com.kizitonwose.calendarview.model.InDateStyle
 import com.kizitonwose.calendarview.utils.next
 import com.kizitonwose.calendarview.utils.yearMonth
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.time.*
 import java.time.format.DateTimeFormatter
 import java.time.format.TextStyle
@@ -73,34 +76,8 @@ class CalendarActivity : BaseActivity<ActivityCalendarBinding, MainViewModel>() 
             adapter = highlightDayAdapter
         }
 
-        val daysOfWeek = daysOfWeekFromLocale()
+        initCalendar()
 
-        binding.weekDay.children.forEachIndexed { index, view ->
-            (view as TextView).apply {
-                text = daysOfWeek[index].getDisplayName(TextStyle.SHORT, Locale.getDefault())
-                setTextColorRes(R.color.colorIconDark)
-            }
-        }
-
-        val currentMonth = YearMonth.now()
-        val startMonth = currentMonth.minusMonths(10)
-        val endMonth = currentMonth.plusMonths(10)
-        binding.calendar.apply {
-            setup(startMonth, endMonth, daysOfWeek.first())
-            scrollToMonth(currentMonth)
-            dayBinderAdapter = DayBinderAdapter(highlightDays) {
-                notifyDayChanged(it)
-                highlightDayAdapter.setCurrentFocus(it.date)
-            }
-            dayBinder = dayBinderAdapter
-            updateMonthRangeAsync {
-                val view = dayBinderAdapter.selectDayPositionView
-                val lp = binding.rvList.layoutParams
-                lp.height = resources.displayMetrics.heightPixels - binding.appBar.height - (view?.height?:0)
-                binding.rvList.layoutParams = lp
-            }
-        }
-        currentDate(LocalDate.now())
         binding.calendar.monthScrollListener = {
             val firstDate = it.weekDays.first().first().date
             val lastDate = it.weekDays.last().last().date
@@ -134,6 +111,37 @@ class CalendarActivity : BaseActivity<ActivityCalendarBinding, MainViewModel>() 
                 binding.calendar.top += deltaY
             }
         }
+    }
+
+    private fun initCalendar() {
+        val daysOfWeek = daysOfWeekFromLocale()
+
+        binding.weekDay.children.forEachIndexed { index, view ->
+            (view as TextView).apply {
+                text = daysOfWeek[index].getDisplayName(TextStyle.SHORT, Locale.getDefault())
+                setTextColorRes(R.color.colorIconDark)
+            }
+        }
+
+        val currentMonth = YearMonth.now()
+        val startMonth = currentMonth.minusMonths(10)
+        val endMonth = currentMonth.plusMonths(10)
+        binding.calendar.apply {
+            setup(startMonth, endMonth, daysOfWeek.first())
+            scrollToMonth(currentMonth)
+            dayBinderAdapter = DayBinderAdapter(highlightDays) {
+                notifyDayChanged(it)
+                highlightDayAdapter.setCurrentFocus(it.date)
+            }
+            dayBinder = dayBinderAdapter
+            updateMonthRangeAsync {
+                val view = dayBinderAdapter.selectDayPositionView
+                val lp = binding.rvList.layoutParams
+                lp.height = resources.displayMetrics.heightPixels - binding.appBar.height - (view?.height?:0)
+                binding.rvList.layoutParams = lp
+            }
+        }
+        currentDate(LocalDate.now())
     }
 
     override fun initData(savedInstanceState: Bundle?) {}

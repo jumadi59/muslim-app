@@ -16,4 +16,5 @@
     <dimen name="tv_super_big">22sp</dimen>
     <dimen name="tv_max_big">25sp</dimen>
     <dimen name="tv_quran">26sp</dimen>
+    <dimen name="tv_120sp">120sp</dimen>
 </resources>

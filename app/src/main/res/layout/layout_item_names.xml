@@ -84,23 +84,19 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="20 of 99" />
 
-                <TextView
-                    android:id="@+id/tv_name"
-                    android:layout_width="0dp"
+                <ImageView
+                    android:id="@+id/img_name"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="120dp"
                     android:layout_marginStart="@dimen/margin_8"
                     android:layout_marginEnd="@dimen/margin_8"
-                    android:fontFamily="@font/allah_names"
-                    android:text="@{names.unicode.empty ? names.arabic : names.unicode}"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textDirection="rtl"
-                    android:textSize="120sp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_translation"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_number_of"
-                    tools:text="\u00a3"/>
+                    tools:ignore="ContentDescription"
+                    app:tint="@color/white" />
 
                 <TextView
                     android:id="@+id/tv_latin"
@@ -113,7 +109,7 @@
                     android:textSize="@dimen/tv_big"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@+id/img_name"
                     tools:text="As Shabuur" />
 
                 <TextView
