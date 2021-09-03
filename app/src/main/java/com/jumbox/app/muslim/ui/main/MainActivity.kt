@@ -36,6 +36,8 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
     private var prayers: List<Prayer>? = null
     private var isErrorFetchLocation = false
     private val bottomSheetFindRegion = BottomSheetFindRegion{
+        preference.city = it.name
+        preference.locationId = it.id
         viewModel.fetchPrayers(it.id)
     }
 

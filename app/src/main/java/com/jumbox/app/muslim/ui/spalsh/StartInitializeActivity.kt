@@ -47,6 +47,8 @@ class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, Mai
     private val bottomSheetFindRegion = BottomSheetFindRegion {
         binding.tvCity.text = it.name
         currentLocation = it
+        preference.city = it.name
+        preference.locationId = it.id
     }
 
     override fun initView() {
