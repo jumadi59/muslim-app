@@ -109,4 +109,8 @@
     <string name="tafsir_ayat" translatable="false">Tafsir ayat</string>
     <string name="tafsir_surah_verse">Tafsir %s: %s</string>
     <string name="source" translatable="false">Source:</string>
+    <string name="title_other">Other</string>
+    <string name="donate">Donation For Developers</string>
+    <string name="more_app">More App</string>
+    <string name="rate_app">Rate App</string>
 </resources>

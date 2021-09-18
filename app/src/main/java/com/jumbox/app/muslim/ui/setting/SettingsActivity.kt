@@ -3,16 +3,20 @@ package com.jumbox.app.muslim.ui.setting
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
+import com.android.billingclient.api.*
 import com.jumbox.app.muslim.BuildConfig
 import com.jumbox.app.muslim.R
 import com.jumbox.app.muslim.base.BasePreferenceActivity
 import com.jumbox.app.muslim.databinding.PreferenceSettingsBinding
 import com.jumbox.app.muslim.ui.about.AboutActivity
 import com.jumbox.app.muslim.utils.elevationAppBar
-import com.jumbox.app.muslim.utils.gone
 
-class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>() {
+class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
+    PurchasesUpdatedListener {
+
+    private lateinit var billingClient: BillingClient
 
     override fun getLayoutId() = R.layout.preference_settings
 
@@ -47,7 +51,48 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>() {
             })
         }
 
-        binding.donate.root.gone()
+        binding.donate.root.setOnClickListener {
+            connect()
+        }
+    }
+
+    private fun connect() {
+        billingClient = BillingClient
+            .newBuilder(this)
+            .enablePendingPurchases()
+            .setListener(this)
+            .build()
+        billingClient.startConnection(object : BillingClientStateListener {
+            override fun onBillingSetupFinished(billingResult: BillingResult) {
+                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                    queryOneTimeProducts()
+                }
+            }
+
+            override fun onBillingServiceDisconnected() {}
+        })
+    }
+
+    private fun queryOneTimeProducts() {
+        val skuListToQuery = ArrayList<String>()
+        skuListToQuery.add("donate")
+        val params = SkuDetailsParams.newBuilder()
+        params
+            .setSkusList(skuListToQuery)
+            .setType(BillingClient.SkuType.INAPP)
+
+        billingClient.querySkuDetailsAsync(
+            params.build()
+        ) { result, skuDetails ->
+            Log.d("SettingActivity", "onSkuDetailsResponse ${result.responseCode}")
+            if (skuDetails != null) {
+                for (skuDetail in skuDetails) {
+                    Log.i("SettingActivity", skuDetail.toString())
+                }
+            } else {
+                Log.i("SettingActivity", "No skus found from query")
+            }
+        }
     }
 
 
@@ -73,6 +118,8 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>() {
             " ${preference.alarmTimeOut}"
         )
         binding.corrountAdzan.summary = preference.alarmCorrectionTime.joinToString(",")
-        binding.donate.summary = "Donasi untuk Developers"
+        binding.donate.summary = "Berdonasi untuk para pengembang aplikasi"
     }
+
+    override fun onPurchasesUpdated(p0: BillingResult, p1: MutableList<Purchase>?) {}
 }
