@@ -10,11 +10,10 @@
 
         <TextView
             android:id="@+id/tv_title"
+            style="@style/TitleBottomSheetStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/target_counter"
-            android:textSize="@dimen/tv_big"
-            android:textColor="@color/color_primary"
             android:layout_marginBottom="@dimen/margin_16"/>
 
 

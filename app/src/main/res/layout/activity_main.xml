@@ -12,7 +12,6 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:stateListAnimator="@animator/appbar_elevation_0dp"
             android:theme="@style/Theme.IslamicApp.AppBarOverlay">
 
@@ -33,7 +32,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/margin_16"
-                        android:textColor="@color/colorIconDark"
                         android:textSize="@dimen/tv_small"
                         android:text="@string/location"/>
 
@@ -50,7 +48,6 @@
                         android:singleLine="true"
                         android:maxLength="24"
                         tools:text="Bengkulu Tengah"
-                        android:textColor="@color/colorIconDark"
                         app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
                 </LinearLayout>
@@ -200,7 +197,6 @@
                             android:layout_marginEnd="6dp"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:foreground="?attr/selectableItemBackground"
-                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="12dp"
                             app:cardElevation="8dp"
                             app:cardUseCompatPadding="true"
@@ -250,7 +246,6 @@
                             android:layout_marginEnd="@dimen/margin_16"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:foreground="?attr/selectableItemBackground"
-                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="12dp"
                             app:cardElevation="8dp"
                             app:cardUseCompatPadding="true"
@@ -307,7 +302,6 @@
                             android:layout_marginEnd="6dp"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:foreground="?attr/selectableItemBackground"
-                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="12dp"
                             app:cardElevation="8dp"
                             app:cardUseCompatPadding="true"
@@ -357,7 +351,6 @@
                             android:layout_marginEnd="@dimen/margin_16"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:foreground="?attr/selectableItemBackground"
-                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="12dp"
                             app:cardElevation="8dp"
                             app:cardUseCompatPadding="true"
@@ -414,7 +407,6 @@
                             android:layout_marginEnd="6dp"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:foreground="?attr/selectableItemBackground"
-                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="12dp"
                             app:cardElevation="8dp"
                             app:cardUseCompatPadding="true"
@@ -496,7 +488,6 @@
                             android:layout_marginEnd="@dimen/margin_16"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:foreground="?attr/selectableItemBackground"
-                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="12dp"
                             app:cardElevation="8dp"
                             app:cardUseCompatPadding="true"

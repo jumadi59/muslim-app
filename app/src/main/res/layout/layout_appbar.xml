@@ -6,7 +6,6 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:stateListAnimator="@animator/appbar_elevation_0dp"
         android:theme="@style/Theme.IslamicApp.AppBarOverlay">
 
@@ -14,7 +13,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
             android:elevation="0dp"
             app:popupTheme="@style/Theme.IslamicApp.PopupOverlay" />
 

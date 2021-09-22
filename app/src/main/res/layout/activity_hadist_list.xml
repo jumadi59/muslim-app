@@ -20,7 +20,6 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:stateListAnimator="@animator/appbar_elevation_0dp"
             android:theme="@style/Theme.IslamicApp.AppBarOverlay">
 
@@ -28,7 +27,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/white"
                 android:elevation="0dp"
                 app:popupTheme="@style/Theme.IslamicApp.PopupOverlay"
                 app:layout_scrollFlags="scroll|enterAlways|snap" />
@@ -42,6 +40,7 @@
 
                 <EditText
                     android:id="@+id/et_search"
+                    style="@style/TextInputStyle"
                     android:layout_width="0dp"
                     android:layout_height="38dp"
                     android:layout_weight="1"
@@ -51,7 +50,7 @@
                     android:layout_marginStart="@dimen/margin_16"
                     android:layout_marginEnd="@dimen/margin_16"
                     android:background="@drawable/background_input_search"
-                    android:textColor="@color/hint"
+                    android:textColor="?attr/colorControlNormal"
                     android:textSize="@dimen/tv_normal"
                     android:drawablePadding="10dp"
                     android:maxLines="1"

@@ -25,10 +25,10 @@
 
             <TextView
                 android:id="@+id/tv_title"
+                style="@style/TitleBottomSheetStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
                 android:layout_marginStart="16dp"
                 tools:text="Select city"/>
 
@@ -36,6 +36,7 @@
 
         <EditText
             android:id="@+id/et_search"
+            style="@style/TextInputStyle"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
@@ -44,8 +45,6 @@
             android:layout_marginBottom="8dp"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-            android:background="@drawable/background_round"
-            android:backgroundTint="#f0f0f0"
             android:textSize="13sp"
             android:drawableStart="@drawable/ic_search"
             android:imeOptions="actionSearch"

@@ -35,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/tv_big"
                 android:text="@{title}"
-                android:textColor="@color/black"
                 tools:text="@string/fajr"/>
 
             <TextView

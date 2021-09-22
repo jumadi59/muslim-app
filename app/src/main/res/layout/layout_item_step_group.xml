@@ -19,8 +19,8 @@
                 android:id="@+id/expand_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@id/expand_arrow"
                 android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/expand_arrow"
                 android:textSize="@dimen/tv_normal"
                 tools:text="Shahih Bukhari" />
 

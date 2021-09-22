@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <attr name="lineColor" format="color" />
+
     <declare-styleable name="FlexBoxLayout">
         <attr name="viewPartMain" format="reference" />
         <attr name="viewPartSlave" format="reference" />

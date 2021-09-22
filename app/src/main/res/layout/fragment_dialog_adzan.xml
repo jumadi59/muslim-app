@@ -3,87 +3,92 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_gradient_round"
-        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
         tools:layout_margin="24dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/background"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="380dp"
-            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_height="wrap_content"
             android:background="@drawable/background_gradient_round"
-            android:fitsSystemWindows="true"
-            android:backgroundTintMode="screen"
-            tools:backgroundTint="#6534b4">
+            android:backgroundTint="@color/white">
 
-            <ImageView
-                android:id="@+id/imageView1"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/background"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:alpha="0.2"
-                android:scaleType="fitCenter"
-                android:src="@drawable/forground"
-                tools:ignore="ContentDescription" />
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.52"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+                android:layout_height="380dp"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/background_gradient_round"
+                android:fitsSystemWindows="true"
+                android:backgroundTintMode="screen"
+                tools:backgroundTint="#6534b4">
 
                 <ImageView
-                    android:id="@+id/img_lighting"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_light2"
-                    tools:tint="@color/white"
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/forground"
+                    tools:ignore="ContentDescription" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.52"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <ImageView
+                        android:id="@+id/img_lighting"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_light2"
+                        tools:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/img_sun_moon"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_sun"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/background"
+                    android:scaleType="centerCrop"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
-                    android:id="@+id/img_sun_moon"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_sun"
-                    app:tint="@color/white"
+                    android:id="@+id/img_tint_mosque"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.4"
+                    android:src="@drawable/background"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:tint="#6534b4"
                     tools:ignore="ContentDescription" />
 
-            </FrameLayout>
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/background"
-                android:scaleType="centerCrop"
-                tools:ignore="ContentDescription" />
-
-            <ImageView
-                android:id="@+id/img_tint_mosque"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:alpha="0.4"
-                android:src="@drawable/background"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:tint="#6534b4"
-                tools:ignore="ContentDescription" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,46 +96,47 @@
             android:orientation="vertical"
             android:layout_gravity="bottom"
             android:paddingTop="@dimen/margin_16"
-            android:background="@drawable/background_gradient_round"
-            android:backgroundTint="@color/white">
+            android:background="?attr/colorOnBackground">
 
-            <TextView
-                android:id="@+id/prayer_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_16"
-                android:layout_marginEnd="@dimen/margin_16"
-                android:layout_marginBottom="@dimen/margin_6"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textSize="@dimen/tv_big"
-                tools:text="Waktunya Salat Asr"/>
+                <TextView
+                    android:id="@+id/prayer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_6"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_big"
+                    tools:text="Waktunya Salat Asr"/>
 
-            <TextView
-                android:id="@+id/prayer_time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_16"
-                android:layout_marginEnd="@dimen/margin_16"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textSize="@dimen/tv_super_big"
-                tools:text="15:31"/>
+                <TextView
+                    android:id="@+id/prayer_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/tv_super_big"
+                    tools:text="15:31"/>
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/Widget.App.Button"
-                android:id="@+id/close"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_16"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginTop="@dimen/margin_16"
-                android:stateListAnimator="@null"
-                android:text="@string/close"/>
-        </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.App.Button"
+                    android:id="@+id/close"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_16"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:stateListAnimator="@null"
+                    android:text="@string/close"/>
+            </LinearLayout>
 
-    </FrameLayout>
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </layout>

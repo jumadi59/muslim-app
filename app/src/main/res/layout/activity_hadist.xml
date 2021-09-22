@@ -17,7 +17,6 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:stateListAnimator="@animator/appbar_elevation_0dp"
             android:theme="@style/Theme.IslamicApp.AppBarOverlay">
 
@@ -25,7 +24,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/white"
                 android:elevation="0dp"
                 app:popupTheme="@style/Theme.IslamicApp.PopupOverlay"
                 android:padding="0dp"
@@ -49,6 +47,7 @@
                         android:textStyle="bold"
                         android:ellipsize="end"
                         android:maxLines="1"
+                        android:textColor="?attr/colorControlNormal"
                         tools:text="Arbain Nawawi I" />
 
                     <TextView
@@ -58,6 +57,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textSize="@dimen/tv_small"
+                        android:textColor="?attr/colorControlNormal"
                         tools:text="Nomor 213"/>
 
                 </LinearLayout>
@@ -100,7 +100,6 @@
                         android:backgroundTint="@color/accent_translucent"
                         android:padding="@dimen/margin_8"
                         android:fontFamily="@font/al_qalam_quran"
-                        android:textColor="@color/black"
                         android:textDirection="rtl"
                         app:htmlFormat="@{hadist.arabic}"
                         app:isGone="@{hadist.arabic == null || hadist.arabic.empty}"

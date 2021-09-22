@@ -12,6 +12,10 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
+import android.util.TypedValue
+
+
+
 
 /**
  * Created by Jumadi Janjaya date on 16/05/2021.
@@ -32,8 +36,11 @@ class BottomSheetTafsir(private val surah: Surah, private val verse: Verse) : Ba
         binding.nestedScrollView.setOnScrollChangeListener { _: NestedScrollView?, _: Int, scrollY: Int, _: Int, _: Int ->
             if (scrollY == 0)
                 binding.toolbar.setBackgroundColor(Color.TRANSPARENT)
-            else
-                binding.toolbar.setBackgroundResource(R.color.white)
+            else {
+                val value = TypedValue()
+                requireActivity().theme.resolveAttribute(R.attr.backgroundColor, value, true)
+                binding.toolbar.setBackgroundResource(value.data)
+            }
         }
     }
 

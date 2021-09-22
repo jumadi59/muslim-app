@@ -13,7 +13,6 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:stateListAnimator="@animator/appbar_elevation_0dp"
             android:theme="@style/Theme.IslamicApp.AppBarOverlay">
 
@@ -43,7 +42,7 @@
                         android:ellipsize="end"
                         android:singleLine="true"
                         tools:text="Al-Fatiha"
-                        android:textColor="@color/colorIconDark"
+                        android:textColor="?attr/colorControlNormal"
                         app:drawableEndCompat="@drawable/ic_baseline_keyboard_arrow_down_24" />
 
                     <TextView
@@ -53,6 +52,7 @@
                         android:ellipsize="end"
                         android:maxLines="1"
                         android:textSize="@dimen/tv_small"
+                        android:textColor="?attr/colorControlNormal"
                         tools:text="Makkiyah (Mecca)"/>
 
                 </LinearLayout>
