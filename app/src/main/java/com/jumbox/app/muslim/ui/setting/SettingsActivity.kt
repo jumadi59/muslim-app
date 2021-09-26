@@ -12,6 +12,11 @@ import com.jumbox.app.muslim.base.BasePreferenceActivity
 import com.jumbox.app.muslim.databinding.PreferenceSettingsBinding
 import com.jumbox.app.muslim.ui.about.AboutActivity
 import com.jumbox.app.muslim.utils.elevationAppBar
+import com.jumbox.app.muslim.utils.gone
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
     PurchasesUpdatedListener {
@@ -51,6 +56,7 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
             })
         }
 
+        binding.donate.root.gone()
         binding.donate.root.setOnClickListener {
             connect()
         }
@@ -65,7 +71,7 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(billingResult: BillingResult) {
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    queryOneTimeProducts()
+                    CoroutineScope(Dispatchers.IO).launch { queryOneTimeProducts() }
                 }
             }
 
@@ -73,7 +79,7 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
         })
     }
 
-    private fun queryOneTimeProducts() {
+    private suspend fun queryOneTimeProducts() {
         val skuListToQuery = ArrayList<String>()
         skuListToQuery.add("donate")
         val params = SkuDetailsParams.newBuilder()
@@ -81,20 +87,31 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
             .setSkusList(skuListToQuery)
             .setType(BillingClient.SkuType.INAPP)
 
-        billingClient.querySkuDetailsAsync(
-            params.build()
-        ) { result, skuDetails ->
-            Log.d("SettingActivity", "onSkuDetailsResponse ${result.responseCode}")
-            if (skuDetails != null) {
-                for (skuDetail in skuDetails) {
-                    Log.i("SettingActivity", skuDetail.toString())
-                }
-            } else {
-                Log.i("SettingActivity", "No skus found from query")
+        val skuDetailsResult = withContext(Dispatchers.IO) {
+            billingClient.querySkuDetails(params.build())
+        }
+
+        if (skuDetailsResult.skuDetailsList != null) {
+            for (skuDetail in skuDetailsResult.skuDetailsList!!) {
+                Log.i("SettingActivity", skuDetail.toString())
+                val flowParams = BillingFlowParams.newBuilder().setSkuDetails(skuDetail).build()
+                val debugMessage = billingClient.launchBillingFlow(this, flowParams).debugMessage
+                Log.i("SettingActivity", debugMessage)
             }
+        } else {
+            Log.i("SettingActivity", "No skus found from query")
         }
     }
 
+    private suspend fun handlePurchase(purchase: Purchase) {
+        val consumeParams =
+            ConsumeParams.newBuilder()
+                    .setPurchaseToken(purchase.purchaseToken)
+                    .build()
+        val consumeResult = withContext(Dispatchers.IO) {
+            billingClient.consumePurchase(consumeParams)
+        }
+    }
 
     override fun onResume() {
         super.onResume()
@@ -121,5 +138,15 @@ class SettingsActivity : BasePreferenceActivity<PreferenceSettingsBinding>(),
         binding.donate.summary = "Berdonasi untuk para pengembang aplikasi"
     }
 
-    override fun onPurchasesUpdated(p0: BillingResult, p1: MutableList<Purchase>?) {}
+    override fun onPurchasesUpdated(billingResult: BillingResult, purchases: MutableList<Purchase>?) {
+        if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && purchases != null) {
+            for (purchase in purchases) {
+                CoroutineScope(Dispatchers.IO).launch { handlePurchase(purchase) }
+            }
+        } else if (billingResult.responseCode == BillingClient.BillingResponseCode.USER_CANCELED) {
+            // Handle an error caused by a user cancelling the purchase flow.
+        } else {
+            // Handle any other error codes.
+        }
+    }
 }

@@ -31,8 +31,7 @@
             app:cardPreventCornerOverlap="true"
             app:cardCornerRadius="8dp"
             android:clipToPadding="false"
-            app:cardUseCompatPadding="false"
-            app:cardBackgroundColor="@color/white">
+            app:cardUseCompatPadding="false">
 
             <androidx.core.widget.NestedScrollView
                 android:id="@+id/back"

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.jumbox.app.muslim.R
 import com.jumbox.app.muslim.data.pref.Preference
@@ -15,6 +16,7 @@ import com.jumbox.app.muslim.vo.Status.*
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : DaggerAppCompatActivity() {
 
     @Inject
@@ -47,6 +49,7 @@ class SplashActivity : DaggerAppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
+        Log.d("SplashActivity", "isReminder ${ReminderReceiver.isReminder(this)}")
         if (!ReminderReceiver.isReminder(this)) ReminderReceiver.updateAlarm(this)
         countDownTimer.start()
     }
