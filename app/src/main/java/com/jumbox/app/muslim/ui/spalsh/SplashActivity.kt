@@ -9,7 +9,6 @@ import androidx.databinding.DataBindingUtil
 import com.jumbox.app.muslim.R
 import com.jumbox.app.muslim.data.pref.Preference
 import com.jumbox.app.muslim.databinding.ActivitySplashBinding
-import com.jumbox.app.muslim.manager.AppOpenManager
 import com.jumbox.app.muslim.receiver.ReminderReceiver
 import com.jumbox.app.muslim.ui.main.MainActivity
 import com.jumbox.app.muslim.vo.Status.*
@@ -30,15 +29,8 @@ class SplashActivity : DaggerAppCompatActivity() {
 
         override fun onFinish() {
             if (preference.isInitialize) {
-                if (AppOpenManager.isShowingAd) {
-                    AppOpenManager.callbackDismiss = {
-                        startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-                        finish()
-                    }
-                } else {
-                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-                    finish()
-                }
+                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
             } else {
                 startActivity(Intent(this@SplashActivity, StartInitializeActivity::class.java))
                 finish()

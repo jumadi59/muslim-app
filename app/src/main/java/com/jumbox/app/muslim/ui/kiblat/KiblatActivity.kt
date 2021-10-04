@@ -14,7 +14,6 @@ import com.jumbox.app.muslim.base.BaseActivity
 import com.jumbox.app.muslim.databinding.ActivityKiblatBinding
 import com.jumbox.app.muslim.service.LocationServices
 import com.jumbox.app.muslim.ui.main.MainViewModel
-import com.jumbox.app.muslim.utils.createViewAdBanner
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
@@ -67,8 +66,6 @@ class KiblatActivity : BaseActivity<ActivityKiblatBinding, MainViewModel>(), Mul
                 .withListener(this)
                 .onSameThread()
                 .check()
-
-        createViewAdBanner(binding.layoutAd)
     }
 
     override fun initData(savedInstanceState: Bundle?) {}

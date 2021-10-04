@@ -49,4 +49,9 @@
         <item name="tabTextAppearance">@style/TextContentTab</item>
     </style>
 
+    <style name="BackgroundCompass">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/compass_background_dark</item>
+    </style>
+
 </resources>

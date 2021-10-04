@@ -4,6 +4,7 @@ import com.jumbox.app.muslim.ui.main.BottomSheetFindRegion
 import com.jumbox.app.muslim.ui.prayer.AdzanDialogFragment
 import com.jumbox.app.muslim.ui.quran.BottomSheetListSurah
 import com.jumbox.app.muslim.ui.quran.BottomSheetTafsir
+import com.jumbox.app.muslim.ui.zikir.FragmentBottomSheetInput
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -27,4 +28,7 @@ abstract class DialogFragmentModule {
 
     @ContributesAndroidInjector
     abstract fun contributeBottomSheetTafsir() : BottomSheetTafsir
+
+    @ContributesAndroidInjector
+    abstract fun contributeFragmentBottomSheetInput() : FragmentBottomSheetInput
 }

@@ -10,7 +10,7 @@ def localProperties = new Properties()
 
 android {
     compileSdkVersion 31
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.jumbox.app.muslim"
@@ -85,6 +85,7 @@ dependencies {
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.1.0'
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.android.gms:play-services-ads-lite:20.3.0'
     kapt 'com.android.databinding:compiler:3.1.4'
 
     implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}"
@@ -92,7 +93,6 @@ dependencies {
     implementation 'com.github.razir.progressbutton:progressbutton:2.1.0'
     implementation 'com.karumi:dexter:6.2.0'
     implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:3.0.0'
-    implementation 'com.google.android.gms:play-services-ads:20.2.0'
 
     implementation "com.google.dagger:dagger:2.35.1"
     implementation "com.google.dagger:dagger-android:2.35.1"

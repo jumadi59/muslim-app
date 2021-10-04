@@ -41,7 +41,7 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
         const val CHANNEL_NAME = "Notification Adzan"
 
         private const val ALARM_ID = 1010
-        const val ACTION_REMINDER = "com.jumbox.app.islamic.ACTION_REMINDER"
+        const val ACTION_REMINDER = "com.jumbox.app.muslim.ACTION_REMINDER"
 
         private const val EXTRA_PRAYER_TIME = "extra_time"
         private const val EXTRA_PRAYER_ID = "extra_id"

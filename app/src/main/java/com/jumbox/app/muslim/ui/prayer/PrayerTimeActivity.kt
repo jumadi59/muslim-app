@@ -1,11 +1,14 @@
 package com.jumbox.app.muslim.ui.prayer
 
+import android.animation.ArgbEvaluator
+import android.animation.ValueAnimator
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.core.animation.doOnEnd
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jumbox.app.muslim.R
 import com.jumbox.app.muslim.base.BaseActivity
@@ -77,6 +80,24 @@ class PrayerTimeActivity : BaseActivity<ActivityPrayerTimeBinding, MainViewModel
             }
         }
         viewModel.prayers()
+    }
+
+    private fun nowTimePrayer(callbackFinish: () -> Unit) {
+        supportActionBar?.setTitle(R.string.now_time_player)
+        val colorTo = binding.tvTime.currentTextColor
+        ValueAnimator.ofObject(ArgbEvaluator(), Color.TRANSPARENT, colorTo).apply {
+            duration = 500L
+            repeatCount = 10000 / duration.toInt()
+            repeatMode = ValueAnimator.REVERSE
+            addUpdateListener {
+                if (it.animatedValue is Int) binding.tvTime.setTextColor(it.animatedValue as Int)
+            }
+            this.doOnEnd {
+                callbackFinish.invoke()
+                supportActionBar?.setTitle(R.string.next_prayer_time)
+            }
+            start()
+        }
     }
 
     override fun initData(savedInstanceState: Bundle?) {

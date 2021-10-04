@@ -1,5 +1,7 @@
 package com.jumbox.app.muslim.ui.main
 
+import android.animation.ArgbEvaluator
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -9,6 +11,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.core.animation.doOnEnd
 import com.jumbox.app.muslim.R
 import com.jumbox.app.muslim.base.BaseActivity
 import com.jumbox.app.muslim.data.pref.Preference
@@ -56,7 +59,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             it.setDisplayShowTitleEnabled(false)
         }
 
-        binding.tvLocation.text = preference.city
+        synchronized(preference) {
+            binding.tvLocation.text = preference.city
+        }
         binding.tvLocation.setOnClickListener {
             if (isErrorFetchLocation) viewModel.fetchPrayers()
             else {
@@ -118,6 +123,24 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
          }
 
         //createViewAdBanner(binding.layoutAd)
+    }
+
+    private fun nowTimePrayer(callbackFinish: () -> Unit) {
+        binding.textView.setText(R.string.now_time_player)
+        val colorTo = binding.tvCountDownTimePrayer.currentTextColor
+        ValueAnimator.ofObject(ArgbEvaluator(), Color.TRANSPARENT, colorTo).apply {
+            duration = 500L
+            repeatCount = 10000 / duration.toInt()
+            repeatMode = ValueAnimator.REVERSE
+            addUpdateListener {
+                if (it.animatedValue is Int) binding.tvCountDownTimePrayer.setTextColor(it.animatedValue as Int)
+            }
+            this.doOnEnd {
+                callbackFinish.invoke()
+                binding.textView.setText(R.string.next_prayer_time)
+            }
+            start()
+        }
     }
 
     override fun initData(savedInstanceState: Bundle?) {
@@ -238,7 +261,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
             }
 
             override fun onFinish() {
-                updatePrayer(prayers!!)
+                nowTimePrayer {
+                    updatePrayer(prayers!!)
+                }
             }
         }
         countDownTimer!!.start()

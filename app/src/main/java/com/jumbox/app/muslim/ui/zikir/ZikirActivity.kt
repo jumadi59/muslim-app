@@ -21,7 +21,6 @@ import com.jumbox.app.muslim.R
 import com.jumbox.app.muslim.data.pref.Preference
 import com.jumbox.app.muslim.databinding.ActivityZikirBinding
 import com.jumbox.app.muslim.receiver.ReminderReceiver
-import com.jumbox.app.muslim.utils.createViewAdBanner
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -108,7 +107,6 @@ class ZikirActivity : DaggerAppCompatActivity() {
 
         initData()
         handleIntent(intent)
-        createViewAdBanner(binding.layoutAd)
     }
 
     private fun setCounter() {

@@ -138,4 +138,9 @@
         <item name="android:textSize">@dimen/tv_big2</item>
     </style>
 
+    <style name="BackgroundCompass">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:src">@drawable/compass_background</item>
+    </style>
+
 </resources>

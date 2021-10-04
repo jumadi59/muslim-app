@@ -59,16 +59,16 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_name"
                     android:layout_toEndOf="@id/text_source"
-                    android:singleLine="true"
                     android:ellipsize="marquee"
-                    android:marqueeRepeatLimit ="marquee_forever"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:scrollHorizontally="true"
-                    android:textSize="@dimen/tv_small"
+                    android:marqueeRepeatLimit="marquee_forever"
                     android:paddingStart="@dimen/margin_6"
                     android:paddingEnd="@dimen/margin_6"
-                    tools:text="Aplikasi Quran Kementrian Agama Republik Indonesia"/>
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textSize="@dimen/tv_small"
+                    tools:text="Aplikasi Quran Kementrian Agama Republik Indonesia" />
 
             </RelativeLayout>
 

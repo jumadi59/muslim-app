@@ -5,27 +5,24 @@ import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.*
+import android.graphics.Paint.ANTI_ALIAS_FLAG
 import android.net.Uri
 import android.os.IBinder
+import android.text.*
 import android.text.style.ClickableSpan
 import android.text.style.URLSpan
 import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
 import com.google.android.material.appbar.AppBarLayout
-import com.jumbox.app.muslim.BuildConfig
 import com.jumbox.app.muslim.R
-import com.jumbox.app.muslim.databinding.LayoutAdBannnerBinding
 import com.jumbox.app.muslim.databinding.LayoutMessageBinding
 import com.jumbox.app.muslim.vo.Jadwal
 import com.jumbox.app.muslim.vo.Prayer
@@ -34,11 +31,6 @@ import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
-
-import android.graphics.Paint.ANTI_ALIAS_FLAG
-import android.graphics.fonts.Font
-import android.text.*
-import android.widget.ImageView
 
 
 /**
@@ -261,17 +253,6 @@ fun TextView.urlClickListener(callback: (uri: Uri) -> Unit) {
                 }
             }, getSpanStart(URLSpan), getSpanEnd(URLSpan), Spanned.SPAN_INCLUSIVE_EXCLUSIVE)
             removeSpan(URLSpan)
-        }
-    }
-}
-
-fun Activity.createViewAdBanner(layout: LayoutAdBannnerBinding) {
-    AdView(this).apply {
-        this.adSize = AdSize.BANNER
-        this.adUnitId = if (BuildConfig.DEBUG) "ca-app-pub-3940256099942544/6300978111" else getString(R.string.ad_unit_id_banner)
-        this.loadAd(AdRequest.Builder().build())
-        if (layout.root is ViewGroup) {
-            (layout.root as ViewGroup).addView(this)
         }
     }
 }
