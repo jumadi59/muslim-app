@@ -44,10 +44,9 @@
                     android:layout_gravity="center">
 
                     <ImageView
+                        style="@style/BackgroundCompass"
                         android:layout_width="300dp"
                         android:layout_height="300dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/compass_background"
                         tools:ignore="ContentDescription" />
 
                     <ImageView
