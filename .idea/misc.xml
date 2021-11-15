@@ -3,42 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/drawable/divider.xml" value="0.2703125" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/drawable/dot.xml" value="0.2703125" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.2703125" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_asmaul_husna.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_calendar.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_hadist.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_hadist_list.xml" value="0.264" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_kiblat.xml" value="0.264" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_prayer_time.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_quran.xml" value="0.264" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_quran_list.xml" value="0.4" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_ring_adzan.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_start_initialize.xml" value="0.264" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_zikir.xml" value="0.264" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_bottom_sheet_input.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_bottom_sheet_search.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_bottom_sheet_tafsir.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_dialog_adzan.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_dialog_time_picker.xml" value="0.2504528985507246" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_surah.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_appbar.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_basmallah.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_bookmark.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_highlight_day.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_jadwal.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_list_surah.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_names.xml" value="0.23369565217391305" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_pref.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_pref_category.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_pref_more.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_step_group.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_suggestion.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_message.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/preference_settings.xml" value="0.1793478260869565" />
-        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/preference_timing_correction.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_start_initialize.xml" value="0.2421875" />
       </map>
     </option>
   </component>
