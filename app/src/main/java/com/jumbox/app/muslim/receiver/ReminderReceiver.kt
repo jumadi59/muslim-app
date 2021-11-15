@@ -5,6 +5,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
@@ -171,7 +172,9 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
                                     preference.alarmTimeOut.toString(),
                                     context.getString(it.name.nameResource(R.string::class.java))
                                 )
-                                notify(context, title, body, prayer.time)
+                                notify(context, title, body, prayer.time,
+                                    Uri.parse("android.resource://"
+                                            + context.packageName + "/" + if (prayer.name == "fajr") R.raw.fajr else R.raw.normal))
                                 nextReminder(context, time)
                             }
                         }
@@ -202,7 +205,9 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
                     )
                 )
             }
-            notify(context, title, body, prayer.time)
+            notify(context, title, body, prayer.time,
+                Uri.parse("android.resource://"
+                        + context.packageName + "/" + if (prayer.name == "fajr") R.raw.fajr else R.raw.normal))
             nextReminder(context, prayer.time)
         }
     }
@@ -211,7 +216,8 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
         context: Context,
         title: String,
         msg: String,
-        id: Long
+        id: Long,
+        sound: Uri,
     ) {
         val managerCompat = NotificationManagerCompat.from(context)
         val pendingIntent = PendingIntent.getActivity(
@@ -224,7 +230,7 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(title)
                 .setContentText(msg)
-            .setStyle(NotificationCompat.BigTextStyle().bigText(msg))
+            .setStyle(NotificationCompat.BigTextStyle().bigText(msg)).setSound(sound)
             .setAutoCancel(true).setContentIntent(pendingIntent)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
