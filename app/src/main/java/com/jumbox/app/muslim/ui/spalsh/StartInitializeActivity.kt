@@ -119,7 +119,7 @@ class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, Mai
     }
 
     private fun loadAddress() {
-        GlobalScope.launch(Dispatchers.Default) {
+        GlobalScope.launch(Dispatchers.Main) {
             delay(100)
             if (gps.location == null) {
                 if (gps.retry()) {
