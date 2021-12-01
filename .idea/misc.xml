@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_main.xml" value="0.3546875" />
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_quran.xml" value="0.35144927536231885" />
         <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/activity_start_initialize.xml" value="0.2421875" />
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/fragment_bottom_sheet_search.xml" value="0.2421875" />
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_appbar.xml" value="0.3546875" />
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_pref_category.xml" value="0.2421875" />
+        <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/preference_settings.xml" value="0.2421875" />
       </map>
     </option>
   </component>

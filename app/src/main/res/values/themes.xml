@@ -124,6 +124,7 @@
     <style name="TextInputStyle">
         <item name="android:background">@drawable/background_input_search</item>
         <item name="android:backgroundTint">#f0f0f0</item>
+        <item name="android:textColor">@color/grey_dark</item>
     </style>
 
     <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
