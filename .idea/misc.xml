@@ -10,6 +10,16 @@
         <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_appbar.xml" value="0.3546875" />
         <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/layout_item_pref_category.xml" value="0.2421875" />
         <entry key="..\:/Users/Jumadi/AndroidStudioProjects/muslim-app/app/src/main/res/layout/preference_settings.xml" value="0.2421875" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/drawable/background_gradient.xml" value="0.2555" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/drawable/ic_light.xml" value="0.2555" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout-land/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout-land/activity_prayer_time.xml" value="0.264" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout/activity_about.xml" value="0.19356300997280146" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout/activity_main.xml" value="0.19356300997280146" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout/activity_prayer_time.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout/fragment_bottom_sheet_tafsir.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout/fragment_dialog_time_picker.xml" value="0.19356300997280146" />
+        <entry key="..\:/Users/jumad/StudioProjects/muslim-app/app/src/main/res/layout/preference_alaram_before.xml" value="0.19356300997280146" />
       </map>
     </option>
   </component>

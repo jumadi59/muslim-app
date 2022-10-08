@@ -78,16 +78,24 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val calendar = Calendar.getInstance(TimeZone.getDefault())
             calendar.time = Date(time)
-            val pendingIntent = PendingIntent.getBroadcast(
-                context,
-                ALARM_ID,
-                Intent(context, ReminderReceiver::class.java).apply {
+
+            val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                PendingIntent.getBroadcast(context, ALARM_ID, Intent(context, ReminderReceiver::class.java).apply {
                     action = ACTION_REMINDER
                     putExtra(EXTRA_PRAYER_ID, idPrayer)
                     putExtra(EXTRA_PRAYER_TIME, time)
                 },
-                PendingIntent.FLAG_CANCEL_CURRENT
-            )
+                    PendingIntent.FLAG_MUTABLE
+                )
+            } else {
+                PendingIntent.getBroadcast(context, ALARM_ID, Intent(context, ReminderReceiver::class.java).apply {
+                        action = ACTION_REMINDER
+                        putExtra(EXTRA_PRAYER_ID, idPrayer)
+                        putExtra(EXTRA_PRAYER_TIME, time)
+                    },
+                    PendingIntent.FLAG_CANCEL_CURRENT
+                )
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 alarmManager.setExactAndAllowWhileIdle(
                     AlarmManager.RTC_WAKEUP,
@@ -107,17 +115,26 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
         }
 
         fun isReminder(context: Context) : Boolean {
-            return PendingIntent.getBroadcast(context, ALARM_ID,
+            val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.getBroadcast(context, ALARM_ID,
+                Intent(context, ReminderReceiver::class.java),
+                PendingIntent.FLAG_MUTABLE
+            ) else PendingIntent.getBroadcast(context, ALARM_ID,
                 Intent(context, ReminderReceiver::class.java),
                 PendingIntent.FLAG_CANCEL_CURRENT
-            ) != null
+            )
+            return pendingIntent != null
         }
 
         private fun cancelReminder(context: Context) {
             if (!isReminder(context)) return
 
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            val pendingIntent = PendingIntent.getBroadcast(
+            val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.getBroadcast(
+                context, ALARM_ID, Intent(
+                    context,
+                    ReminderReceiver::class.java
+                ), PendingIntent.FLAG_MUTABLE
+            ) else PendingIntent.getBroadcast(
                 context, ALARM_ID, Intent(
                     context,
                     ReminderReceiver::class.java
@@ -224,7 +241,7 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
             context, 0,
             Intent(context, PrayerTimeActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
-            PendingIntent.FLAG_UPDATE_CURRENT
+            PendingIntent.FLAG_MUTABLE
         )
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)

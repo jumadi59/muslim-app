@@ -4,7 +4,13 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
@@ -68,6 +74,38 @@ abstract class BaseActivity<VH : ViewDataBinding, VM: ViewModel> : DaggerAppComp
 
         initView()
         initView(savedInstanceState)
+        chekOrientation(resources.configuration)
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        chekOrientation(newConfig)
+    }
+
+    private fun chekOrientation(configuration: Configuration) {
+        if (configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Log.d("Daiya", "ORIENTATION_LANDSCAPE")
+            if (Build.VERSION.SDK_INT >= 30) {
+                binding.root.windowInsetsController?.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+            } else {
+                binding.root.systemUiVisibility =
+                    View.SYSTEM_UI_FLAG_LOW_PROFILE or
+                            View.SYSTEM_UI_FLAG_FULLSCREEN or
+                            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or
+                            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
+                            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
+                            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            }
+        } else if (configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Log.d("Daiya", "ORIENTATION_PORTRAIT")
+            if (Build.VERSION.SDK_INT >= 30) {
+                binding.root.windowInsetsController?.show(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+            } else {
+                binding.root.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
+            }
+        }
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {

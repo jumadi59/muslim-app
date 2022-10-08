@@ -1,6 +1,5 @@
 package com.jumbox.app.muslim.ui.spalsh
 
-import android.Manifest
 import android.content.Intent
 import android.graphics.Color
 import android.net.Uri
@@ -18,23 +17,17 @@ import com.jumbox.app.muslim.service.LocationServices
 import com.jumbox.app.muslim.ui.main.BottomSheetFindRegion
 import com.jumbox.app.muslim.ui.main.MainActivity
 import com.jumbox.app.muslim.ui.main.MainViewModel
+import com.jumbox.app.muslim.utils.PermissionManager
 import com.jumbox.app.muslim.vo.Status
 import com.jumbox.app.muslim.vo.Suggestion
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.MultiplePermissionsReport
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.io.IOException
-import java.util.*
 import javax.inject.Inject
 
-class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, MainViewModel>() ,
-    MultiplePermissionsListener {
+class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, MainViewModel>() {
 
     @Inject
     lateinit var preference: Preference
@@ -112,12 +105,15 @@ class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, Mai
     }
 
     private fun checkPermission() {
-        Dexter.withContext(this).withPermissions(arrayListOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION))
-            .withListener(this)
-            .onSameThread()
-            .check()
+        PermissionManager.cekPermissionLocation(this, {
+            gps.services()
+            loadAddress()
+        }) {
+            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+            val uri: Uri = Uri.fromParts("package", packageName, null)
+            intent.data = uri
+            startActivityForResult(intent, 9000)
+        }
     }
 
     private fun loadAddress() {
@@ -149,27 +145,6 @@ class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, Mai
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 9000) checkPermission()
-
-    }
-
-    override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
-        if (report!!.areAllPermissionsGranted()) {
-            gps.callServices()
-            loadAddress()
-        } else if (report.isAnyPermissionPermanentlyDenied) {
-            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-            val uri: Uri = Uri.fromParts("package", packageName, null)
-            intent.data = uri
-            startActivityForResult(intent, 9000)
-        }
-    }
-
-    override fun onPermissionRationaleShouldBeShown(p0: MutableList<PermissionRequest>?, token: PermissionToken?) {
-        token!!.continuePermissionRequest()
-    }
 
     override fun onStop() {
         super.onStop()

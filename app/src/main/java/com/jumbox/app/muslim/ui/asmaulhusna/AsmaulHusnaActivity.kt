@@ -172,9 +172,9 @@ class AsmaulHusnaActivity : BaseActivity<ActivityAsmaulHusnaBinding, MainViewMod
             binding.btnOk.animate().scaleX(0f).scaleY(0f).setDuration(150).start()
             binding.btnPlay.animate().scaleX(0f).scaleY(0f).setDuration(150).start()
             binding.btnShare.animate().scaleX(0f).scaleY(0f).setDuration(150).setListener(object : Animator.AnimatorListener {
-                override fun onAnimationStart(p0: Animator?) {}
+                override fun onAnimationStart(animation: Animator) {}
 
-                override fun onAnimationEnd(p0: Animator?) {
+                override fun onAnimationEnd(animation: Animator) {
                     binding.btnPlay.setImageResource(R.drawable.ic_baseline_play_arrow_24)
                     binding.btnOk.setImageResource(R.drawable.ic_book)
                     binding.btnShare.setImageResource(R.drawable.ic_share)
@@ -184,9 +184,9 @@ class AsmaulHusnaActivity : BaseActivity<ActivityAsmaulHusnaBinding, MainViewMod
                     binding.btnShare.animate().scaleX(1f).scaleY(1f).setDuration(150).setListener(null).start()
                 }
 
-                override fun onAnimationCancel(p0: Animator?) {}
+                override fun onAnimationCancel(animation: Animator) {}
 
-                override fun onAnimationRepeat(p0: Animator?) {}
+                override fun onAnimationRepeat(animation: Animator) {}
 
             }).start()
         } else {
@@ -195,9 +195,9 @@ class AsmaulHusnaActivity : BaseActivity<ActivityAsmaulHusnaBinding, MainViewMod
             binding.btnOk.animate().scaleX(0f).scaleY(0f).setDuration(150).start()
             binding.btnPlay.animate().scaleX(0f).scaleY(0f).setDuration(150).start()
             binding.btnShare.animate().scaleX(0f).scaleY(0f).setDuration(150).setListener(object : Animator.AnimatorListener {
-                override fun onAnimationStart(p0: Animator?) {}
+                override fun onAnimationStart(animation: Animator) {}
 
-                override fun onAnimationEnd(p0: Animator?) {
+                override fun onAnimationEnd(animation: Animator) {
                     binding.btnPlay.setImageResource(R.drawable.ic_baseline_skip_previous_24)
                     binding.btnShare.setImageResource(R.drawable.ic_baseline_skip_next_24)
 
@@ -206,9 +206,9 @@ class AsmaulHusnaActivity : BaseActivity<ActivityAsmaulHusnaBinding, MainViewMod
                     binding.btnShare.animate().scaleX(1f).scaleY(1f).setDuration(150).setListener(null).start()
                 }
 
-                override fun onAnimationCancel(p0: Animator?) {}
+                override fun onAnimationCancel(animation: Animator) {}
 
-                override fun onAnimationRepeat(p0: Animator?) {}
+                override fun onAnimationRepeat(animation: Animator) {}
 
             }).start()
         }
