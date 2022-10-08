@@ -1,6 +1,5 @@
 package com.jumbox.app.muslim.ui.kiblat
 
-import android.Manifest
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -14,11 +13,7 @@ import com.jumbox.app.muslim.base.BaseActivity
 import com.jumbox.app.muslim.databinding.ActivityKiblatBinding
 import com.jumbox.app.muslim.service.LocationServices
 import com.jumbox.app.muslim.ui.main.MainViewModel
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.MultiplePermissionsReport
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import com.jumbox.app.muslim.utils.PermissionManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -26,7 +21,7 @@ import kotlinx.coroutines.launch
 import java.io.IOException
 
 
-class KiblatActivity : BaseActivity<ActivityKiblatBinding, MainViewModel>(), MultiplePermissionsListener {
+class KiblatActivity : BaseActivity<ActivityKiblatBinding, MainViewModel>() {
 
 
     private lateinit var qiblaDirectionCompass: QiblaDirectionCompass
@@ -60,12 +55,15 @@ class KiblatActivity : BaseActivity<ActivityKiblatBinding, MainViewModel>(), Mul
             }
         }
 
-        Dexter.withContext(this).withPermissions(arrayListOf(
-                Manifest.permission.ACCESS_FINE_LOCATION,
-                Manifest.permission.ACCESS_COARSE_LOCATION))
-                .withListener(this)
-                .onSameThread()
-                .check()
+        PermissionManager.cekPermissionLocation(this, {
+            gps.services()
+            compass()
+        }) {
+            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+            val uri: Uri = Uri.fromParts("package", packageName, null)
+            intent.data = uri
+            startActivityForResult(intent, 9000)
+        }
     }
 
     override fun initData(savedInstanceState: Bundle?) {}
@@ -126,32 +124,4 @@ class KiblatActivity : BaseActivity<ActivityKiblatBinding, MainViewModel>(), Mul
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == 9000) {
-            Dexter.withContext(this)
-                    .withPermissions(arrayListOf(
-                            Manifest.permission.ACCESS_FINE_LOCATION,
-                            Manifest.permission.ACCESS_COARSE_LOCATION))
-                    .withListener(this)
-                    .onSameThread()
-                    .check()
-        }
-    }
-
-    override fun onPermissionsChecked(report: MultiplePermissionsReport?) {
-        if (report!!.areAllPermissionsGranted()) {
-            gps.callServices()
-            compass()
-        } else if (report.isAnyPermissionPermanentlyDenied) {
-            val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-            val uri: Uri = Uri.fromParts("package", packageName, null)
-            intent.data = uri
-            startActivityForResult(intent, 9000)
-        }
-    }
-
-    override fun onPermissionRationaleShouldBeShown(p0: MutableList<PermissionRequest>?, token: PermissionToken?) {
-        token!!.continuePermissionRequest()
-    }
 }

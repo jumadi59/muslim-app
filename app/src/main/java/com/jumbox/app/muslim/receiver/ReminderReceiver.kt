@@ -5,6 +5,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
@@ -41,7 +42,7 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
         const val CHANNEL_NAME = "Notification Adzan"
 
         private const val ALARM_ID = 1010
-        const val ACTION_REMINDER = "com.jumbox.app.muslim.ACTION_REMINDER"
+        const val ACTION_REMINDER = "com.jumbox.app.islamic.ACTION_REMINDER"
 
         private const val EXTRA_PRAYER_TIME = "extra_time"
         private const val EXTRA_PRAYER_ID = "extra_id"
@@ -77,16 +78,24 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val calendar = Calendar.getInstance(TimeZone.getDefault())
             calendar.time = Date(time)
-            val pendingIntent = PendingIntent.getBroadcast(
-                context,
-                ALARM_ID,
-                Intent(context, ReminderReceiver::class.java).apply {
+
+            val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                PendingIntent.getBroadcast(context, ALARM_ID, Intent(context, ReminderReceiver::class.java).apply {
                     action = ACTION_REMINDER
                     putExtra(EXTRA_PRAYER_ID, idPrayer)
                     putExtra(EXTRA_PRAYER_TIME, time)
                 },
-                PendingIntent.FLAG_CANCEL_CURRENT
-            )
+                    PendingIntent.FLAG_MUTABLE
+                )
+            } else {
+                PendingIntent.getBroadcast(context, ALARM_ID, Intent(context, ReminderReceiver::class.java).apply {
+                        action = ACTION_REMINDER
+                        putExtra(EXTRA_PRAYER_ID, idPrayer)
+                        putExtra(EXTRA_PRAYER_TIME, time)
+                    },
+                    PendingIntent.FLAG_CANCEL_CURRENT
+                )
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 alarmManager.setExactAndAllowWhileIdle(
                     AlarmManager.RTC_WAKEUP,
@@ -106,17 +115,26 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
         }
 
         fun isReminder(context: Context) : Boolean {
-            return PendingIntent.getBroadcast(context, ALARM_ID,
+            val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.getBroadcast(context, ALARM_ID,
+                Intent(context, ReminderReceiver::class.java),
+                PendingIntent.FLAG_MUTABLE
+            ) else PendingIntent.getBroadcast(context, ALARM_ID,
                 Intent(context, ReminderReceiver::class.java),
                 PendingIntent.FLAG_CANCEL_CURRENT
-            ) != null
+            )
+            return pendingIntent != null
         }
 
         private fun cancelReminder(context: Context) {
             if (!isReminder(context)) return
 
             val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            val pendingIntent = PendingIntent.getBroadcast(
+            val pendingIntent = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) PendingIntent.getBroadcast(
+                context, ALARM_ID, Intent(
+                    context,
+                    ReminderReceiver::class.java
+                ), PendingIntent.FLAG_MUTABLE
+            ) else PendingIntent.getBroadcast(
                 context, ALARM_ID, Intent(
                     context,
                     ReminderReceiver::class.java
@@ -171,7 +189,9 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
                                     preference.alarmTimeOut.toString(),
                                     context.getString(it.name.nameResource(R.string::class.java))
                                 )
-                                notify(context, title, body, prayer.time)
+                                notify(context, title, body, prayer.time,
+                                    Uri.parse("android.resource://"
+                                            + context.packageName + "/" + if (prayer.name == "fajr") R.raw.fajr else R.raw.normal))
                                 nextReminder(context, time)
                             }
                         }
@@ -202,7 +222,9 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
                     )
                 )
             }
-            notify(context, title, body, prayer.time)
+            notify(context, title, body, prayer.time,
+                Uri.parse("android.resource://"
+                        + context.packageName + "/" + if (prayer.name == "fajr") R.raw.fajr else R.raw.normal))
             nextReminder(context, prayer.time)
         }
     }
@@ -211,20 +233,21 @@ class ReminderReceiver : DaggerBroadcastReceiver() {
         context: Context,
         title: String,
         msg: String,
-        id: Long
+        id: Long,
+        sound: Uri,
     ) {
         val managerCompat = NotificationManagerCompat.from(context)
         val pendingIntent = PendingIntent.getActivity(
-                        context, 0,
-                        Intent(context, PrayerTimeActivity::class.java)
-                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
-                        PendingIntent.FLAG_UPDATE_CURRENT
-                )
+            context, 0,
+            Intent(context, PrayerTimeActivity::class.java)
+                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+            PendingIntent.FLAG_MUTABLE
+        )
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(title)
-                .setContentText(msg)
-            .setStyle(NotificationCompat.BigTextStyle().bigText(msg))
+            .setContentText(msg)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(msg)).setSound(sound)
             .setAutoCancel(true).setContentIntent(pendingIntent)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

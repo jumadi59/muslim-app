@@ -190,7 +190,7 @@ class ZikirActivity : DaggerAppCompatActivity() {
                         Intent(this, ZikirActivity::class.java)
                         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 .putExtra(EXTRA_CURRENT_COUNTER, currentCounter)
-                                .putExtra(EXTRA_MAX_COUNTER, maxCounter), PendingIntent.FLAG_CANCEL_CURRENT))
+                                .putExtra(EXTRA_MAX_COUNTER, maxCounter), PendingIntent.FLAG_MUTABLE))
         val managerCompat = NotificationManagerCompat.from(this)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -50,7 +50,12 @@ class ScrollCollapsing @JvmOverloads constructor(
 
     inner class CustomGestureListener : GestureDetector.SimpleOnGestureListener() {
 
-        override fun onScroll(e1: MotionEvent?, e2: MotionEvent?, distanceX: Float, distanceY: Float): Boolean {
+        override fun onScroll(
+            e1: MotionEvent,
+            e2: MotionEvent,
+            distanceX: Float,
+            distanceY: Float
+        ): Boolean {
             return if (distanceX == 0.0f)
                 callbackScrolling?.invoke(distanceY)?:super.onScroll(e1, e2, distanceX, distanceY)
             else super.onScroll(e1, e2, distanceX, distanceY)

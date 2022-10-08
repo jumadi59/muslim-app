@@ -29,6 +29,7 @@ import com.jumbox.app.muslim.ui.main.MainViewModel
 import com.jumbox.app.muslim.utils.isNight
 import com.jumbox.app.muslim.utils.nameResource
 import com.jumbox.app.muslim.vo.Prayer
+import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector

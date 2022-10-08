@@ -92,7 +92,7 @@ class Repository @Inject constructor(
                     }
                 }
                 preference.locationId = city.id
-                //preference.city = city.name
+                preference.city = city.name
 
                 appDatabase.prayerDao().deleteAll()
                 appDatabase.prayerDao().insertAll(list)

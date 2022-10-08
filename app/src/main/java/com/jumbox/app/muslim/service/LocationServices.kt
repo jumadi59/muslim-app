@@ -1,17 +1,8 @@
 package com.jumbox.app.muslim.service
 
-import android.Manifest
 import android.content.Context
 import android.location.*
 import android.os.Bundle
-import android.widget.Toast
-import com.jumbox.app.muslim.R
-import com.karumi.dexter.Dexter
-import com.karumi.dexter.PermissionToken
-import com.karumi.dexter.listener.PermissionDeniedResponse
-import com.karumi.dexter.listener.PermissionGrantedResponse
-import com.karumi.dexter.listener.PermissionRequest
-import com.karumi.dexter.listener.single.PermissionListener
 import java.io.IOException
 import java.util.*
 
@@ -28,11 +19,13 @@ class LocationServices(private val context: Context) {
         @Throws(IOException::class)
         fun getLocationAddress(context: Context, lat: Double, lang: Double): Address? {
             val decoder = Geocoder(context, Locale.getDefault())
-            val data: List<Address> = decoder.getFromLocation(lat, lang, 1)
-            return when (data.isNotEmpty()) {
-                true -> data[0]
-                false -> null
-            }
+            val data = decoder.getFromLocation(lat, lang, 1)
+            return if (data != null) {
+                when (data.isNotEmpty()) {
+                    true -> data[0]
+                    false -> null
+                }
+            } else null
         }
     }
 
@@ -41,7 +34,7 @@ class LocationServices(private val context: Context) {
     private var countRetry = 0
 
     @Throws(SecurityException::class)
-    private fun services() {
+    fun services() {
         manager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager?
         when {
             manager!!.isProviderEnabled(LocationManager.GPS_PROVIDER) -> {
@@ -60,28 +53,6 @@ class LocationServices(private val context: Context) {
             }
         }
 
-    }
-
-    fun callServices() {
-        Dexter.withContext(context)
-            .withPermission(Manifest.permission.ACCESS_FINE_LOCATION)
-            .withListener(object : PermissionListener {
-                override fun onPermissionGranted(response: PermissionGrantedResponse?) {
-                    services()
-                }
-
-                override fun onPermissionDenied(response: PermissionDeniedResponse?) {
-                    Toast.makeText(context, R.string.error_permission_location, Toast.LENGTH_SHORT).show()
-                }
-
-                override fun onPermissionRationaleShouldBeShown(
-                        permission: PermissionRequest?,
-                        token: PermissionToken?
-                ) {
-                    token!!.continuePermissionRequest()
-                }
-            })
-            .check()
     }
 
     private var locationListenerGPS: LocationListener = object : LocationListener {
