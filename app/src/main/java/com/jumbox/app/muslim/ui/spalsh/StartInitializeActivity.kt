@@ -50,7 +50,6 @@ class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, Mai
             it.setDisplayHomeAsUpEnabled(false)
             it.setDisplayShowTitleEnabled(false)
         }
-        checkPermission()
 
         binding.tvCity.setOnClickListener {
             bottomSheetFindRegion.show(supportFragmentManager, "find_region")
@@ -102,6 +101,11 @@ class StartInitializeActivity : BaseActivity<ActivityStartInitializeBinding, Mai
                 }
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        checkPermission()
     }
 
     private fun checkPermission() {
